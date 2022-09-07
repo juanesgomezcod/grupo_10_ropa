@@ -6,7 +6,7 @@ La marca de ropa SWIP ofrece productos de moda personalizados y diseñados por l
 Integrantes del Grupo:
 Lautaro Muñoz
 Julieth Paola Olarte - Soy ingeniera ambiental, de la ciudad de Bogotá, Colombia; tengo 22 años y me gustaría desempeñarme en el rol de Front-end.
-David Cuentas
+David Cuentas - Especialista en Gerencia Educativa, actualmente laborando en Institución educativa como docente. Soy de Colombia, Cartagena.
 Milagros Lencinas - Tengo 20 años, vivo en Argentina Buenos Aires y estudie un tiempo psicología e hice cursos sobre estética.
 Juan Esteban Gomez - Soy administrador de Negocios, tengo 39 años y vivo en Medellin-Colombia.
 
