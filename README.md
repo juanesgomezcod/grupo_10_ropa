@@ -19,3 +19,5 @@ paginas de referencia
 6. [Maniac BA (Maniac BA)](https://www.maniacba.com.ar/)
 
 Se eligió el listado de sitios anteriormente comentados, puesto que algunos de estos pertenecen a marcas mundialmente conocidas y sus páginas web cuentan con diferentes funcionalidades, una estética llamativa y original, y apuntan a todo tipo de público aunque mayormente esta dirigido al mercado juvenil; además, uno de los sitios usados como referencia presenta una estructura con una temática similar a la que se esta creando.
+
+link trello: https://trello.com/b/ywliq84S/proyecto-grupo-10
