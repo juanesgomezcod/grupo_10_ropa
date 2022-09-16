@@ -7,41 +7,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swip - Moda personalizada</title>
     <link rel="shortcut icon" href="/public/images/logo/favicon.ico">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
     <header>
+        <div class="encabezado">
+        <section>
+            <div class="logo">
+            <a href="./src/views/index.html"><img src="/images/Logo/logo.png"></a>
+            </div>
+        </section>
+        <section>
+            <input class="search-bar"></input>
+        </section>
+        <section class="login">
+            <div >
+                <img  src="/images/simbolos/iniciar_sesion_png.png">
+            </div>
+            <div class="boton-login">
+                <p><a href="/src/views/login.html">Iniciar sesión</a></p>
+            </div>
+        </section>
+        <section>
+            <div class="bolsa">
+                <img src="/images/simbolos/bolsa_de_compras.png">
+            </div class="boton-carrito-compras">
+            <div class="carritocompras">
+                <p><a href="/src/views/productCart.html">Carrito de compras</a></p>
+            </div>
+        </section>
+    </div>
     </header>
     <main>
-        <nav class = "navegacion"> 
-            <ul  type = "none"> 
-                <li><a href = "/src/views/hoddies.html" >Hoodies</a></li>
-                <li><a href = "/src/views/jeans.html" >Jeans</a></li>
-                <li><a href = "/src/views/remeras.html" >Remeras</a></li>
-                <li><a href = "/src/views/camperas.html" >Camperas</a></li>
-                <li><a href = "/src/views/toteBag.html" >Tote bag</a></li>
+        <nav class="navegacion">
+            <ul type="none">
+                <li><a href="/src/views/hoddies.html">Hoodies</a></li>
+                <li><a href="/src/views/jeans.html">Jeans</a></li>
+                <li><a href="/src/views/remeras.html">Remeras</a></li>
+                <li><a href="/src/views/camperas.html">Camperas</a></li>
+                <li><a href="/src/views/toteBag.html">Tote bag</a></li>
             </ul>
         </nav>
         <!-- //banner
     //guia de tallas
     // imagen no definida -->
-    <!-- seccion del banner -->
-    <!-- revisar el width -->
-    <section class = "banner">
+        <!-- seccion del banner -->
+        <!-- revisar el width -->
+        <section class="banner">
 
-    </section>
-    <section> 
-        <img src = "/Public/images/imagenes ropa/Guia_de_tallas.jpg" width="40%">
-        <div class="boton">
-            <p><a href="/src/views/SizeGuide.html" target="_blank">Guía de tallas</a></p>
-        </div>
-    </section>
-    <section>
-        <img src = "/Public/images/imagenes ropa/Cómo_encargar.jpg" width="40%">
-        <div class = "boton">
-            <p><a href="/src/views/howToBuy.html" target="_blank">¿Cómo encargar?</a></p>
-        </div>
-    </section>
+        </section>
+        <section class="main_inferior">
+            <img src="images/imagenes ropa/Guia_de_tallas.jpg">
+            <div class="boton">
+                <p><a href="/src/views/SizeGuide.html" target="_blank">Guía de tallas</a></p>
+            </div>
+        
+            <img src="images/imagenes ropa/Cómo_encargar.jpg">
+            <div class="boton">
+                <p><a href="/src/views/howToBuy.html" target="_blank">¿Cómo encargar?</a></p>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -87,11 +113,11 @@
             <section>
                 <h4>Redes Sociales</h4>
             </section>
-            <section>
-                <div><img src="/Public/images/simbolos/facebook.png" alt="Facebook"></div>
-                <div><img src="/Public/images/simbolos/instagram.jpg" alt="Instagram"></div>
-                <div><img src="/Public/images/simbolos/whatsapp.png" alt="Whatsapp"></div>
-                <div><img src="/Public/images/simbolos/arroba.png" alt="Email"></div>
+            <section class="redes">
+                <div><img src="/images/simbolos/facebook.png" alt="Facebook"></div>
+                <div><img src="/images/simbolos/instagra2.png" alt="Instagram"></div>
+                <div><img src="/images/simbolos/whatsapp.png" alt="Whatsapp"></div>
+                <div><img src="/images/simbolos/arroba.png" alt="Email"></div>
             </section>
         </div>
         <div class="derechos">
@@ -99,4 +125,5 @@
         </div>
     </footer>
 </body>
+
 </html>

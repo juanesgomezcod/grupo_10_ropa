@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+}
+
+.boton-login p a{
+    text-decoration: none;
+}
+
+.carritocompras p a{
+    text-decoration: none;
+}
+
+.login div img{
+    width: 30px;
+}
+
+.bolsa img{
+    max-width: 30px;
+}
+
+.main_inferior img{
+    max-width: 200px;
+}
+
+.redes div img{
+    max-width: 30px;
+}
+
+.navegacion ul{
+    display: flex;
+    margin: 5px;
+}
+
+.navegacion ul li{
+    margin: 5px;
+}
+
+.navegacion ul li a{
+    text-decoration: none;
+}
