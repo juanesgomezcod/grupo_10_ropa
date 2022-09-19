@@ -4,7 +4,7 @@
 }
 
 .logo img{
-    width: 100%;
+    width: 80%;
 }
 
 .encabezado{
@@ -14,10 +14,17 @@
 
 .boton-login p a{
     text-decoration: none;
+    color: black;
 }
 
 .carritocompras p a{
     text-decoration: none;
+    color: black;
+}
+
+.search-bar{
+    width: 90%;
+    text-align: center;
 }
 
 .login div img{
@@ -27,18 +34,21 @@
 .bolsa img{
     max-width: 30px;
 }
+.main_inferior{
+    text-align: center;
+}
 
 .main_inferior img{
     max-width: 200px;
+    
 }
 
-.redes div img{
-    max-width: 30px;
-}
+
 
 .navegacion ul{
     display: flex;
     margin: 5px;
+    
 }
 
 .navegacion ul li{
@@ -47,4 +57,52 @@
 
 .navegacion ul li a{
     text-decoration: none;
+    color: black;
+}
+
+.boton p a{
+    text-decoration: none;
+    color: black;
+}
+
+.tres_columnas{
+    /* display: flex; */
+    text-align: center;
+}
+
+.redes div img{
+    max-width: 30px;
+}
+
+.redes{
+    display: flex;
+    justify-content: center;
+}
+
+.col1footer{
+    margin-top: 20px;
+}
+
+.col2footer{
+    margin-top: 20px;
+}
+
+.col3footer{
+    margin-top: 20px;
+}
+
+
+.equipo{
+    display: flex;
+    justify-content: center;
+
+}
+
+.equipo div p{
+    margin: 5px;
+}
+
+.derechos{
+    text-align: center;
+    margin-top: 20px;
 }
