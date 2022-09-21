@@ -8,6 +8,9 @@
     <title>Swip - Moda personalizada</title>
     <link rel="shortcut icon" href="/public/images/logo/favicon.ico">
     <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"/>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" rel="stylesheet">
 </head>
 
 <body>
@@ -18,30 +21,31 @@
             <a href="./src/views/index.html"><img src="/images/Logo/logo.png"></a>
             </div>
         </section>
-        <section>
+        <div class = "busqueda">
             <input class="search-bar"></input>
-        </section>
-        <section class="login">
+            <button class="fas fa-search"></button>
+        </div>
+        <div class="login">
             <div >
-                <img  src="/images/simbolos/iniciar_sesion_png.png">
+                <a href="/src/views/login.html"><i class="far fa-user-circle"></i></a> 
             </div>
-            <div class="boton-login">
+            <div class="texto-login">
                 <p><a href="/src/views/login.html">Iniciar sesión</a></p>
             </div>
-        </section>
-        <section>
+        </div>
+        <div class="compras">
             <div class="bolsa">
-                <img src="/images/simbolos/bolsa_de_compras.png">
-            </div class="boton-carrito-compras">
+                <a href="/src/views/productCart.html"><i class="fas fa-shopping-bag"></i></a>
+            </div>
             <div class="carritocompras">
                 <p><a href="/src/views/productCart.html">Carrito de compras</a></p>
             </div>
-        </section>
+        </div>
     </div>
     </header>
     <main>
         <nav class="navegacion">
-            <ul type="none">
+            <ul>
                 <li><a href="/src/views/hoddies.html">Hoodies</a></li>
                 <li><a href="/src/views/jeans.html">Jeans</a></li>
                 <li><a href="/src/views/remeras.html">Remeras</a></li>
@@ -118,10 +122,11 @@
                 <h4>Redes Sociales</h4>
             </section>
             <section class="redes">
-                <div><img src="/images/simbolos/facebook.png" alt="Facebook"></div>
-                <div><img src="/images/simbolos/instagra2.png" alt="Instagram"></div>
-                <div><img src="/images/simbolos/whatsapp.png" alt="Whatsapp"></div>
-                <div><img src="/images/simbolos/arroba.png" alt="Email"></div>
+                <div><i class="fab fa-facebook"></i></div>
+                <div><i class="fab fa-instagram"></i></div>
+                <div><i class="fab fa-whatsapp"></i></div>
+                <div><i class="fas fa-at"></i>
+                </i></div>
             </section>
         </div>
     </div>

@@ -1,10 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Roboto&display=swap');
+
 *{
     margin:0;
     padding:0;
+    font-family: Be Vietnam Pro;
+}
+
+header{
+    font-size: 10px;
+}
+
+main{
+    font-size: 10px;
 }
 
 .logo img{
-    width: 80%;
+    max-width: 40px;
+    margin: 7px 15px 0px 15px;
 }
 
 .encabezado{
@@ -12,28 +24,77 @@
     justify-content: space-between;
 }
 
-.boton-login p a{
-    text-decoration: none;
-    color: black;
+.login{
+    display: flex;
+    margin-top: 12px;
 }
 
+.login i{
+    color: black;
+    font-size: 20px;
+    margin: 3px 9px 3px 4px;
+}
+
+/* se debe arreglar el boton*/
+
+.texto-login p a{
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    border: solid 1px black; 
+    border-radius: 5px; 
+    padding: 3px 2px 3px 2px; 
+    margin-right: 16px;
+    /* width: 28%;
+    padding: 8px 1px 8px 1px; 
+    margin: 0px 100px 0px 100px; */
+    background-color: #848484; 
+    /* color: #ffffff; 
+    text-align: center; */
+}
+
+.bolsa i{
+    color: black;
+    font-size: 20px;
+    margin: 3px 15px 3px 4px;
+}
+
+/* se debe arreglar el boton*/
 .carritocompras p a{
+    text-align: center;
     text-decoration: none;
     color: black;
+    display: none;
+    border: solid 1px black; 
+    border-radius: 5px; 
+    padding: 3px 2px 3px 2px; 
+    margin-right: 16px;
+    background-color: #848484; 
+}
+
+.busqueda{
+    width: 90%;
+    text-align: center;
+    margin: 15px 0px 0px -35px;
 }
 
 .search-bar{
-    width: 90%;
-    text-align: center;
+    width: 70%;
+    border-width: 1px;
+    border-radius: 4px;
 }
 
-.login div img{
-    width: 30px;
+button{
+    border-width: 0px;
+    background-color: white;
+    width: 35%px;
 }
 
-.bolsa img{
-    max-width: 30px;
+.compras{
+    display: flex;
+    margin-top: 12px;
 }
+
 .main_inferior{
     text-align: center;
 }
@@ -43,32 +104,38 @@
     
 }
 
-
 .navegacion ul{
     display: flex;
     margin: 5px;
-    
-    
-    
+    list-style-type: none;
+    text-align: center;
 }
 
 .navegacion ul li{
     margin: 5px;
-    text-align: end;
-    
-    
 }
 
 .navegacion ul li a{
     text-decoration: none;
     color: black;
-    
 }
 
 .boton p a{
+    text-align: center;
     text-decoration: none;
     color: black;
 }
+
+.boton {
+    border: solid 1px black; 
+    width: 28%;
+    padding: 8px 1px 8px 1px; 
+    margin: 0px 100px 0px 100px;
+    background-color: #ffffff; 
+    color: #ffffff; 
+    border-radius: 5px; 
+    text-align: center;
+    }
 
 .tres_columnas{
     /* display: flex; */
@@ -81,7 +148,7 @@
 
 .redes{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .col1footer{
@@ -95,7 +162,6 @@
 .col3footer{
     margin-top: 20px;
 }
-
 
 .equipo{
     display: flex;
@@ -116,5 +182,16 @@
     .tres_columnas{
         display: flex;
         justify-content: space-around;
+    }
+
+    .texto-login p a{
+        text-decoration: none;
+        color: black;
+        display: block;
+    }
+    .carritocompras p a{
+        text-decoration: none;
+        color: black;
+        display: block;
     }
 }
