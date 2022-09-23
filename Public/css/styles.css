@@ -41,15 +41,15 @@ main{
     text-align: center;
     text-decoration: none;
     display: none;
-    border: solid 1px black; 
-    border-radius: 5px; 
-    padding: 3px 2px 3px 2px; 
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 3px 2px 3px 2px;
     margin-right: 16px;
     /* width: 28%;
-    padding: 8px 1px 8px 1px; 
+    padding: 8px 1px 8px 1px;
     margin: 0px 100px 0px 100px; */
-    background-color: #848484; 
-    /* color: #ffffff; 
+    background-color: #848484;
+    /* color: #ffffff;
     text-align: center; */
 }
 
@@ -65,11 +65,11 @@ main{
     text-decoration: none;
     color: black;
     display: none;
-    border: solid 1px black; 
-    border-radius: 5px; 
-    padding: 3px 2px 3px 2px; 
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 3px 2px 3px 2px;
     margin-right: 16px;
-    background-color: #848484; 
+    background-color: #848484;
 }
 
 .busqueda{
@@ -101,7 +101,7 @@ button{
 
 .main_inferior img{
     max-width: 200px;
-    
+
 }
 
 .navegacion ul{
@@ -120,25 +120,54 @@ button{
     color: black;
 }
 
-.boton p a{
+/* .boton{
+
+    display: flex;
     text-align: center;
     text-decoration: none;
     color: black;
+
+    border: solid 1px black;
+    width: 28px;
+} */
+
+.main_inferior p a{
+    display: flex;
+    justify-content: center;
+
+}
+
+.main_inferior p{
+    display: flex;
+    justify-content: center;
+    border: solid 1px black;
+    width: 28%;
+    padding: 8px 1px 8px 1px;
+    margin: 0px 100px 0px 100px;
+    background-color: #ffffff;
+    color: #ffffff;
+    border-radius: 5px;
 }
 
 .boton {
-    border: solid 1px black; 
+    display: flex;
+    justify-content: space-around;
+    border: solid 1px black;
     width: 28%;
-    padding: 8px 1px 8px 1px; 
+    padding: 8px 1px 8px 1px;
     margin: 0px 100px 0px 100px;
-    background-color: #ffffff; 
-    color: #ffffff; 
-    border-radius: 5px; 
-    text-align: center;
+    background-color: #ffffff;
+    color: #ffffff;
+    border-radius: 5px;
+
     }
 
+button{
+    display: flex;
+    justify-content: space-around;
+}
+
 .tres_columnas{
-    /* display: flex; */
     text-align: center;
 }
 
@@ -194,4 +223,18 @@ button{
         color: black;
         display: block;
     }
+    .col1footer section ul li{
+        /* no me funciona */
+        text-decoration: none;
+    }
+
+
+}
+
+@media (min-width: 768px){
+
+}
+
+@media (min-width: 1200px){
+
 }
