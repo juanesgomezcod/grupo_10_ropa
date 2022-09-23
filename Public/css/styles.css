@@ -8,6 +8,9 @@
 
 header{
     font-size: 10px;
+    background-image: url("/images/fondos/fondo1.jpg");
+    background-repeat: repeat;
+    background-size: 200px;
 }
 
 main{
@@ -16,7 +19,7 @@ main{
 
 .logo img{
     max-width: 40px;
-    margin: 7px 15px 0px 15px;
+    margin: 8px 15px 0px 8px
 }
 
 .encabezado{
@@ -30,9 +33,10 @@ main{
 }
 
 .login i{
-    color: black;
+    color: white;
     font-size: 20px;
-    margin: 3px 9px 3px 4px;
+    margin: 7px 9px 3px 4px;
+    text-shadow: 0 0 3px red;
 }
 
 /* se debe arreglar el boton*/
@@ -54,9 +58,10 @@ main{
 }
 
 .bolsa i{
-    color: black;
+    color: white;
     font-size: 20px;
     margin: 3px 15px 3px 4px;
+    text-shadow: 0 0 3px red;
 }
 
 /* se debe arreglar el boton*/
@@ -75,13 +80,14 @@ main{
 .busqueda{
     width: 90%;
     text-align: center;
-    margin: 15px 0px 0px -35px;
+    margin: 19px 0px 0px -35px;
 }
 
 .search-bar{
     width: 70%;
     border-width: 1px;
     border-radius: 4px;
+    background-color: none;
 }
 
 button{
@@ -92,27 +98,50 @@ button{
 
 .compras{
     display: flex;
-    margin-top: 12px;
+    margin-top: 15px;
 }
+
+/* estilos Guia de tallas, como encargar, banner */
 
 .main_inferior{
     text-align: center;
 }
 
+.guia-tallas{
+    position: relative;
+    max-width: 210px !important;
+    z-index: 1;
+    margin-top: 20px;
+  }
+
+  /* fondo para la imagen de guia de tallas */
+  
+  .fondo3{
+    margin-top: 6px;
+    width: 250px;
+    position:absolute;
+    top: 82px;
+    left: 40px;
+    border:none;
+    z-index: -1;
+  }
+
 .main_inferior img{
-    max-width: 200px;
-    
+    max-width: 240px;  
 }
 
 .navegacion ul{
+    font-weight: bold;
     display: flex;
-    margin: 5px;
+    justify-content: center;
+    margin: 20px 0px 6px 0px;
     list-style-type: none;
-    text-align: center;
+    text-align: center
 }
 
 .navegacion ul li{
     margin: 5px;
+    margin-top: 7px;
 }
 
 .navegacion ul li a{
@@ -123,7 +152,7 @@ button{
 .boton p a{
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: black
 }
 
 .boton {
