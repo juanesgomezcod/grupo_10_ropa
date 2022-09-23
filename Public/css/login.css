@@ -1,0 +1,28 @@
+.titulologin{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.emaillogin{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.emaillogin label{
+    display: flex;
+    justify-content: center;
+}
+
+.passwordlogin{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.botonlogin1{
+    display: flex;
+    justify-content: center; 
+}
