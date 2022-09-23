@@ -114,9 +114,14 @@ button{
     margin-top: 20px;
   }
 
+.producto{
+    justify-content: center;
+}
+
+
   /* fondo para la imagen de guia de tallas */
   
-  .fondo3{
+  /* .fondo3{
     margin-top: 6px;
     width: 250px;
     position:absolute;
@@ -124,7 +129,7 @@ button{
     left: 40px;
     border:none;
     z-index: -1;
-  }
+  } */
 
 .main_inferior img{
     max-width: 240px;  
@@ -149,20 +154,20 @@ button{
     color: black;
 }
 
-.boton p a{
+.boton a{
     text-align: center;
     text-decoration: none;
     color: black
 }
 
 .boton {
-    border: solid 1px black; 
-    width: 28%;
-    padding: 8px 1px 8px 1px; 
-    margin: 0px 100px 0px 100px;
-    background-color: #ffffff; 
-    color: #ffffff; 
-    border-radius: 5px; 
+    border: solid 1px black;
+    max-width: 60px;
+    padding: 8px 1px 8px 1px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    color: #ffffff;
+    border-radius: 5px;
     text-align: center;
     }
 
