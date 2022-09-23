@@ -319,4 +319,8 @@ button{
         color: black;
         display: block;
     }
+    .col1footer section ul li{
+        list-style: none;;
+    }
 }
+
