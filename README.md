@@ -21,3 +21,5 @@ paginas de referencia
 Se eligió el listado de sitios anteriormente comentados, puesto que algunos de estos pertenecen a marcas mundialmente conocidas y sus páginas web cuentan con diferentes funcionalidades, una estética llamativa y original, y apuntan a todo tipo de público aunque mayormente esta dirigido al mercado juvenil; además, uno de los sitios usados como referencia presenta una estructura con una temática similar a la que se esta creando.
 
 link trello: https://trello.com/b/ywliq84S/proyecto-grupo-10
+
+Retrospectiva: En general para el primer sprint trabajamos bien, aprendimos que debemos de tener mas comunicacion entre los miembros del grupo y que debemos reunirnos minimo una vez a la semana para ver como vamos todos los miembros con el trabajo y si tenemos alguna duda.
