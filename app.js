@@ -12,6 +12,10 @@ app.get('/login', (req,res)=>{
     res.sendFile(path.resolve(__dirname, "src/views/login.html"));
 });
 
+app.get('/register', (req,res)=>{
+    res.sendFile(path.resolve(__dirname, "src/views/register.html"));
+});
+
 app.listen(3000,() => console.log("Servidor corriendo"))
 
 // app.get("/register", (req,res) => {
