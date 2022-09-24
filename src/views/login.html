@@ -47,29 +47,24 @@
     </div>
     </header>
     <main>
-        <div class="titulologin">
-            <h4>Ingresar</h4>
-        </div>
-        <form action="/" method="get">
-            
-            <div class="emaillogin">
-            <label for="email">Correo Electronico</label>
+        <form action="/login" method="post">
+          <div class="register-container">
+    
+            <h1 class="title">Ingresar</h1>
+            <div class="inputs">
+              <label for="mail">Correo electrónico</label>
+              <input type="email" name="mail" id="mail" placeholder="Correo electrónico" required>
+            </div>  
+            <div class="inputs">
+              <label for="password">Contraseña</label>
+              <input type="password" name="password" id="password" placeholder="Contraseña" required>
             </div>
-            <div class="emaillogin">
-            <input type="email" name="email"  >
+            <div class="account-buttons">
+            <button type="submit" class="account sub">Iniciar sesión</button>
             </div>
-            <div class="passwordlogin">
-            <label for="password">Contraseña</label>
-            </div>
-            <div class="passwordlogin">
-            <input type="password" name="contraseña">
-            </div>
-            <div class="botonlogin1">
-            <button type="iniciosesion">Iniciar Sesion</button>
-            </div>
-            
+           
         </form>
-    </main>
+      </main>
 
     <footer>
         <div class="tres_columnas">
