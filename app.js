@@ -16,6 +16,10 @@ app.get('/register', (req,res)=>{
     res.sendFile(path.resolve(__dirname, "src/views/register.html"));
 });
 
+app.get('/store', (req,res)=>{
+    res.sendFile(path.resolve(__dirname, "src/views/store.html"));
+});
+
 app.listen(3000,() => console.log("Servidor corriendo"))
 
 // app.get("/register", (req,res) => {
