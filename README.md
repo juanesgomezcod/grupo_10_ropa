@@ -22,5 +22,4 @@ Se eligió el listado de sitios anteriormente comentados, puesto que algunos de 
 
 link trello: https://trello.com/b/ywliq84S/proyecto-grupo-10
 
-Retrospectiva
-En general para el primer sprint trabajamos bien, aprendimos que debemos de tener mas comunicacion entre los miembros del grupo y que debemos reunirnos minimo una vez a la semana para ver como vamos todos los miembros con el trabajo y si tenemos alguna duda.
+Retrospectiva: En general para el primer sprint trabajamos bien, aprendimos que debemos de tener mas comunicacion entre los miembros del grupo y que debemos reunirnos minimo una vez a la semana para ver como vamos todos los miembros con el trabajo y si tenemos alguna duda.
