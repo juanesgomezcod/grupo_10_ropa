@@ -1,0 +1,43 @@
+.tituloregistro{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.nombreregistro{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.apellidosregistro{
+    display: flex;
+    justify-content: center;
+}
+
+.emaillogin{
+    display: flex;
+    justify-content: center;
+}
+
+.emaillogin label{
+    display: flex;
+    justify-content: center;
+}
+
+.passwordlogin{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.passwordconfirm{
+    display: flex;
+    justify-content: center;
+}
+
+.botonregistro{
+    display: flex;
+    justify-content: center; 
+}
