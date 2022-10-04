@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swip - Moda personalizada</title>
+    <link rel="shortcut icon" href="/images/logo/favicon.ico">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"/>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/js/v4-shims.js" rel="stylesheet"></script> 
+    <link href="https://use.fontawesome.com/releases/v5.0.4/js/fontawesome.js" rel="stylesheet"> </script>
+</head>
+
+<body>
+    <%- include ("/partials/headerMain")%>
+    <main>
+        <%- include ("/partials/headerNavBar")%>
+        <!-- //banner
+    //guia de tallas
+    // imagen no definida -->
+        <!-- seccion del banner -->
+        <div class="banner">
+            <ul>
+                <li><img src="/images/slider/slide1.jpg" alt=""></li>
+                <li><img src="/images/slider/slide2.jpg" alt=""></li>
+                <li><img src="/images/slider/slide3.jpg" alt=""></li>
+                <li><img src="/images/slider/slide4.jpg" alt=""></li>
+            </ul>
+        </div>
+        <!-- revisar el width -->
+        
+        <div class="main_inferior">
+            <div class="informacion_tallas_compras">
+                <img src="images/imagenes ropa/Guia-5.jpg" class="guia-tallas">
+                <!-- <img src="images/fondos/fondoop8.jpg" class="fondo3"> -->
+                <p class="boton"><a href="/src/views/SizeGuide.html" target="_blank">Guía de tallas</a></p>
+            </div>
+            <div class="informacion_tallas_compras">
+                <img src="images/imagenes ropa/Cómo_encargar5.jpg" class="encargos">
+                <p class="boton"><a href="/src/views/howToBuy.html" target="_blank">¿Cómo encargar?</a></p>
+            </div>
+        </div>
+    </main>
+
+    <div class="linea">
+
+    </div>
+
+    <%- include ("/partials/footer")%>
+</body>
+
+</html>
