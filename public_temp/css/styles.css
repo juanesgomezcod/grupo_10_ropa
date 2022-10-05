@@ -201,17 +201,7 @@ button{
     position: static;
 }
 
-  /* fondo para la imagen de guia de tallas */
-  
-  /* .fondo3{
-    margin-top: 6px;
-    width: 250px;
-    position:absolute;
-    top: 82px;
-    left: 40px;
-    border:none;
-    z-index: -1;
-  } */
+
 
 .main_inferior img{
     max-width: 240px;  
