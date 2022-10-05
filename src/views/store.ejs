@@ -1,253 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Swip - Moda personalizada</title>
-        <link rel="shortcut icon" href="/images/logo/favicon.ico">
-        <link rel="stylesheet" href="./css/styles.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        rel="stylesheet"/>
-        <link href="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" rel="stylesheet">
-        <link href="https://use.fontawesome.com/releases/v5.0.4/js/v4-shims.js" rel="stylesheet"></script> 
-        <link href="https://use.fontawesome.com/releases/v5.0.4/js/fontawesome.js" rel="stylesheet"> </script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <title>Store</title>
+    <link rel="stylesheet" href="/css/store.css">
+    <!--Temporal-->
+    <script src="scripts.js"></script>
+</head>
 <body>
-    <header>
-        <div class="encabezado">
-            <section>
-                <div class="logo">
-                <a href="./src/views/index.html"><img src="/images/Logo/logo.png"></a>
-                </div>
-            </section>
-            <div class = "busqueda">
-                <input class="search-bar"></input>
-                <button class="fas fa-search"></button>
-            </div>
-            <div class="login">
-                <div >
-                    <a href="/src/views/login.html"><i class="far fa-user-circle"></i></a> 
-                </div>
-                <div class="texto-login">
-                    <p><a href="/src/views/login.html">Iniciar sesión</a></p>
-                </div>
-            </div>
-            <div class="compras">
-                <div class="bolsa">
-                    <a href="/src/views/productCart.html"><i class="fas fa-shopping-bag"></i></a>
-                </div>
-                <div class="carritocompras">
-                    <p><a href="/src/views/productCart.html">Carrito de compras</a></p>
-                </div>
-            </div>
-        </div>
-        </header>
-
-        <div class="encabezado">
-            <section>
-                <div class="logo">
-                    <a href="./src/views/index.html"><img src="/images/Logo/logo.png"></a>
-                </div>
-            </section>
-            <section>
-                <input class="search-bar"></input>
-            </section>
-            <section class="login">
-                <div>
-                    <img src="/images/simbolos/iniciar_sesion_png.png">
-                </div>
-                <div class="boton-login">
-                    <p><a href="/src/views/login.html">Iniciar sesión</a></p>
-                </div>
-            </section>
-            <section>
-                <div class="bolsa">
-                    <img src="/images/simbolos/bolsa_de_compras.png">
-                </div class="boton-carrito-compras">
-                <div class="carritocompras">
-                    <p><a href="/src/views/productCart.html">Carrito de compras</a></p>
-                </div>
-            </section>
-            <div>
-                <h2> PRECIOS ESPECIALES </h2>
-            </div>
-
-            <section class="section-product">
-                               <section class="product-store">
-                    <div class="page-content">
-                        <div class="product-container">
-                            <h3>Nombre</h3>
-                            <img src="images/store/producto1.jpg" alt="Camiseta chik">
-                            <h2>35900</h2>
-                            <button class="button-add">Agregar</button>
-                        </div>
-
-                        <div class="product-container">
-                            <h3>Nombre</h3>
-                            <img src="images/store/producto2.JPG" alt="Camiseta chik">
-                            <h2>35900</h2>
-                            <button class="button-add">Agregar</button>
-                        </div>
-
-                        <div class="product-container">
-                            <h3>Nombre</h3>
-                            <img src="images/store/producto3.JPG" alt="Camiseta chik">
-                            <h2>35900</h2>
-                            <button class="button-add">Agregar</button>
-                        </div>
-                        <div class="product-container">
-                            <h3>Nombre</h3>
-                            <img src="images/store/producto4.JPG" alt="Camiseta chik">
-                            <h2>35900</h2>
-                            <button class="button-add">Agregar</button>
-                        </div>
-                        <div class="product-container">
-                            <h3>Nombre</h3>
-                            <img src="images/store/producto5.JPG" alt="Camiseta chik">
-                            <h2>35900</h2>
-                            <button class="button-add">Agregar</button>
-                        </div>
-                        <div class="product-container">
-                            <h3>Nombre</h3>
-                            <img src="images/store/producto6.JPG" alt="Camiseta chik">
-                            <h2>35900</h2>
-                            <button class="button-add">Agregar</button>
-                        </div>
-                        <div class="product-container">
-                            <h3>Nombre</h3>
-                            <img src="images/store/producto7.JPG" alt="Camiseta chik">
-                            <h2>35900</h2>
-                            <button class="button-add">Agregar</button>
-                        </div>
-                        <div class="product-container">
-                            <h3>Nombre</h3>
-                            <img src="images/store/producto8.JPG" alt="Camiseta chik">
-                            <h2>35900</h2>
-                            <button class="button-add">Agregar</button>
-                        </div>
-                        <div class="product-container">
-                            <h3>Nombre</h3>
-                            <img src="images/store/producto9.JPG" alt="Camiseta chik">
-                            <h2>35900</h2>
-                            <button class="button-add">Agregar</button>
-                        </div>
-                        <div class="product-container">
-                            <h3>Nombre</h3>
-                            <img src="images/store/producto10.JPG" alt="Camiseta chik">
-                            <h2>35900</h2>
-                            <button class="button-add">Agregar</button>
-                        </div>
-                        <div class="product-container">
-                            <h3>Nombre</h3>
-                            <img src="images/store/producto11.JPG" alt="Camiseta chik">
-                            <h2>35900</h2>
-                            <button class="button-add">Agregar</button>
-                        </div>
-                        <div class="product-container">
-                            <h3>Nombre</h3>
-                            <img src="images/store/producto12.JPG" alt="Camiseta chik">
-                            <h2>35900</h2>
-                            <button class="button-add">Agregar</button>
-                        </div>
-                    </div>
-                </section>
-        </div>
-
-        <main>
-        <nav class="navegacion">
-            <ul type="none">
-                <li><a href="/src/views/hoddies.html">Hoodies</a></li>
-                <li><a href="/src/views/jeans.html">Jeans</a></li>
-                <li><a href="/src/views/remeras.html">Remeras</a></li>
-                <li><a href="/src/views/camperas.html">Camperas</a></li>
-                <li><a href="/src/views/toteBag.html">Tote bag</a></li>
-            </ul>
-        </nav>
-        <!-- //banner
-    //guia de tallas
-    // imagen no definida -->
-        <!-- seccion del banner -->
-        <!-- revisar el width -->
-        <section class="banner">
-
-        </section>
-        <section class="main_inferior">
-            <img src="images/imagenes ropa/Guia_de_tallas.jpg">
-            <div class="boton">
-                <p><a href="/src/views/SizeGuide.html" target="_blank">Guía de tallas</a></p>
-            </div>
-
-            <img src="images/imagenes ropa/Cómo_encargar.jpg">
-            <div class="boton">
-                <p><a href="/src/views/howToBuy.html" target="_blank">¿Cómo encargar?</a></p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="tres_columnas">
-        <div class="col1footer">
-            <section>
-                <h4>Ayuda</h4>
-            </section>
-            <section>
-                <ul>
-                    <li>Envios</li>
-                    <li>Preguntas Frecuentes</li>
-                    <li>Como Devolver</li>
-                </ul>
-            </section>
-        </div>
-        <div class="col2footer">
-            <section>
-                <h4>Equipo</h4>
-            </section>
-            <section>
-                <div class="equipo">
-                <div>
-                    <img src="" alt="">
-                    <p>Milagros</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>David</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Julieth</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Lautaro</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Juan</p>
-                </div>
-            </div>
-            </section>
-        </div>
-        <div class="col3footer">
-            <section>
-                <h4>Redes Sociales</h4>
-            </section>
-            <section class="redes">
-                <div><i class="fab fa-facebook"></i></div>
-                <div><i class="fab fa-instagram"></i></div>
-                <div><i class="fab fa-whatsapp"></i></div>
-                <div><i class="fas fa-at"></i>
-                </i></div>
-            </section>
-        </div>
+    <div class="page-nav">
+     <h1> Mi tienda Store</h1>
     </div>
-        <div class="derechos">
-            <p>@SWIP, Todos los derechos reservados</p>
-        </div>
-    </footer>
+     <div class="store-encabezado">
+        <h2> OFERTAS ESPECIALES</h2>
+    </div>
+    <div class="page-content">
+        <div class="product-container">
+        <h3>Nombre :</h3>
+        <img src="images/store/producto1.jpg" alt="">
+        <p> $ 39500</p>
+        <button class="button-buy" onclick="add('producto1', 39500)">Comprar</button>    
+        
+    </div>
+    <div class="product-container">
+        <h3>Nombre :</h3>
+        <img src="images/store/producto2.jpg" alt="">
+        <p> $ 39500</p>
+        <button class="button-buy">Comprar</button>    
+        
+    </div>
+    <div class="product-container">
+        <h3>Nombre :</h3>
+        <img src="images/store/producto3.jpg" alt="">
+        <p> $ 39500</p>
+        <button class="button-buy">Comprar</button>    
+        
+    </div>
+    <div class="product-container">
+        <h3>Nombre :</h3>
+        <img src="images/store/producto4.jpg" alt="">
+        <p> $ 39500</p>
+        <button class="button-buy">Comprar</button>    
+        
+    </div>
+    <div class="product-container">
+        <h3>Nombre :</h3>
+        <img src="images/store/producto5.jpg" alt="">
+        <p> $ 39500</p>
+        <button class="button-buy">Comprar</button>    
+        
+    </div>
+    <div class="product-container">
+        <h3>Nombre :</h3>
+        <img src="images/store/producto6.jpg" alt="">
+        <p> $ 39500</p>
+        <button class="button-buy">Comprar</button>    
+        
+    </div>
+    <div class="product-container">
+        <h3>Nombre :</h3>
+        <img src="images/store/producto7.jpg" alt="">
+        <p> $ 39500</p>
+        <button class="button-buy">Comprar</button>    
+        
+    </div>
+    <div class="product-container">
+        <h3>Nombre :</h3>
+        <img src="images/store/producto8.jpg" alt="">
+        <p> $ 39500</p>
+        <button class="button-buy">Comprar</button>    
+        
+    </div>
+    <div class="product-container">
+        <h3>Nombre :</h3>
+        <img src="images/store/producto9.jpg" alt="">
+        <p> $ 39500</p>
+        <button class="button-buy">Comprar</button>    
+        
+    </div>
+    <div class="product-container">
+        <h3>Nombre :</h3>
+        <img src="images/store/producto10.jpg" alt="">
+        <p> $ 39500</p>
+        <button class="button-buy">Comprar</button>    
+        
+    </div>
+    <div class="product-container">
+        <h3>Nombre :</h3>
+        <img src="images/store/producto11.jpg" alt="">
+        <p> $ 39500</p>
+        <button class="button-buy">Comprar</button>    
+        
+    </div>
+    <div class="product-container">
+        <h3>Nombre :</h3>
+        <img src="images/store/producto12.jpg" alt="">
+        <p> $ 39500</p>
+        <button class="button-buy">Comprar</button>    
+        
+    </div>
+    <div class="product-container">
+        <h3>Nombre :</h3>
+        <img src="images/store/producto13.jpg" alt="">
+        <p> $ 39500</p>
+        <button class="button-buy">Comprar</button>    
+        
+    </div>
+    <div class="product-container">
+        <h3>Nombre :</h3>
+        <img src="images/store/producto1.jpg" alt="">
+        <p> $ 39500</p>
+        <button class="button-buy">Comprar</button>    
+         </div>
+    </div>
+</div>
+    
 </body>
-
 </html>
-
-
