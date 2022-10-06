@@ -3,6 +3,10 @@ const controller = {
         res.render("store");
     }, 
 
+    productDetail: (req, res) => {
+        res.render("productDetail");
+    }, 
+
     productCart: (req, res) => {
         res.render("productCart");
     }, 
