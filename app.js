@@ -17,10 +17,13 @@ app.use('/', productRoutes);
 
 const userRoutes = require('./src/routes/userRoutes');
 
+
 app.use('/', mainRoutes);
 app.use('/', userRoutes);
 
  
+
+
 app.listen(3000,() => console.log("Servidor corriendo"))
 
 
