@@ -3,7 +3,7 @@ const router = require('router');
 const controller = require('../controllers/productControllers');
 
 
-router.get('/ ', controller.store);
+router.get('/store', controller.store);
 
 
 module.exports = router;
