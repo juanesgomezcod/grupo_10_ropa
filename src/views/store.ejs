@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,113 +12,119 @@
     <link rel="stylesheet" href="/css/store.css">
 
 </head>
+
 <body>
-    <div class="page-nav">
-     <h1> Mi tienda Store</h1>
-    </div>
-     <div class="store-encabezado">
-        <h2> OFERTAS ESPECIALES</h2>
-    </div>
-    <div class="page-content">
-        <div class="product-container">
-        <h3>Nombre :</h3>
-        <img src="images/store/producto1.jpg" alt="">
-        <p> $ 39500</p>
-        <button class="button-buy" onclick="add('producto1', 39500)">Comprar</button>    
-        
-    </div>
-    <div class="product-container">
-        <h3>Nombre :</h3>
-        <img src="images/store/producto2.jpg" alt="">
-        <p> $ 39500</p>
-        <button class="button-buy">Comprar</button>    
-        
-    </div>
-    <div class="product-container">
-        <h3>Nombre :</h3>
-        <img src="images/store/producto3.jpg" alt="">
-        <p> $ 39500</p>
-        <button class="button-buy">Comprar</button>    
-        
-    </div>
-    <div class="product-container">
-        <h3>Nombre :</h3>
-        <img src="images/store/producto4.jpg" alt="">
-        <p> $ 39500</p>
-        <button class="button-buy">Comprar</button>    
-        
-    </div>
-    <div class="product-container">
-        <h3>Nombre :</h3>
-        <img src="images/store/producto5.jpg" alt="">
-        <p> $ 39500</p>
-        <button class="button-buy">Comprar</button>    
-        
-    </div>
-    <div class="product-container">
-        <h3>Nombre :</h3>
-        <img src="images/store/producto6.jpg" alt="">
-        <p> $ 39500</p>
-        <button class="button-buy">Comprar</button>    
-        
-    </div>
-    <div class="product-container">
-        <h3>Nombre :</h3>
-        <img src="images/store/producto7.jpg" alt="">
-        <p> $ 39500</p>
-        <button class="button-buy">Comprar</button>    
-        
-    </div>
-    <div class="product-container">
-        <h3>Nombre :</h3>
-        <img src="images/store/producto8.jpg" alt="">
-        <p> $ 39500</p>
-        <button class="button-buy">Comprar</button>    
-        
-    </div>
-    <div class="product-container">
-        <h3>Nombre :</h3>
-        <img src="images/store/producto9.jpg" alt="">
-        <p> $ 39500</p>
-        <button class="button-buy">Comprar</button>    
-        
-    </div>
-    <div class="product-container">
-        <h3>Nombre :</h3>
-        <img src="images/store/producto10.jpg" alt="">
-        <p> $ 39500</p>
-        <button class="button-buy">Comprar</button>    
-        
-    </div>
-    <div class="product-container">
-        <h3>Nombre :</h3>
-        <img src="images/store/producto11.jpg" alt="">
-        <p> $ 39500</p>
-        <button class="button-buy">Comprar</button>    
-        
-    </div>
-    <div class="product-container">
-        <h3>Nombre :</h3>
-        <img src="images/store/producto12.jpg" alt="">
-        <p> $ 39500</p>
-        <button class="button-buy">Comprar</button>    
-        
-    </div>
-    <div class="product-container">
-        <h3>Nombre :</h3>
-        <img src="images/store/producto13.jpg" alt="">
-        <p> $ 39500</p>
-        <button class="button-buy">Comprar</button>    
-        
-    </div>
-    <div class="product-container">
-        <h3>Nombre :</h3>
-        <img src="images/store/producto1.jpg" alt="">
-        <p> $ 39500</p>
-        <button class="button-buy">Comprar</button>    
-         </div>
-    </div>
-</div>
-    
+    <%- include ("./partials/headerMain")%>
+        <div class="page-nav">
+            <h1> Mi tienda Store</h1>
+        </div>
+        <%- include ("./partials/headerNavBar")%>
+
+            <div class="store-encabezado">
+                <h2> OFERTAS ESPECIALES</h2>
+            </div>
+            <div class="page-content">
+                <div class="product-container">
+                    <h3>Nombre :</h3>
+                    <img src="images/store/producto1.jpg" alt="">
+                    <p> $ 39500</p>
+                    <button class="button-buy" onclick="add('producto1', 39500)">Comprar</button>
+
+                </div>
+                <div class="product-container">
+                    <h3>Nombre :</h3>
+                    <img src="images/store/producto2.jpg" alt="">
+                    <p> $ 39500</p>
+                    <button class="button-buy">Comprar</button>
+
+                </div>
+                <div class="product-container">
+                    <h3>Nombre :</h3>
+                    <img src="images/store/producto3.jpg" alt="">
+                    <p> $ 39500</p>
+                    <button class="button-buy">Comprar</button>
+
+                </div>
+                <div class="product-container">
+                    <h3>Nombre :</h3>
+                    <img src="images/store/producto4.jpg" alt="">
+                    <p> $ 39500</p>
+                    <button class="button-buy">Comprar</button>
+
+                </div>
+                <div class="product-container">
+                    <h3>Nombre :</h3>
+                    <img src="images/store/producto5.jpg" alt="">
+                    <p> $ 39500</p>
+                    <button class="button-buy">Comprar</button>
+
+                </div>
+                <div class="product-container">
+                    <h3>Nombre :</h3>
+                    <img src="images/store/producto6.jpg" alt="">
+                    <p> $ 39500</p>
+                    <button class="button-buy">Comprar</button>
+
+                </div>
+                <div class="product-container">
+                    <h3>Nombre :</h3>
+                    <img src="images/store/producto7.jpg" alt="">
+                    <p> $ 39500</p>
+                    <button class="button-buy">Comprar</button>
+
+                </div>
+                <div class="product-container">
+                    <h3>Nombre :</h3>
+                    <img src="images/store/producto8.jpg" alt="">
+                    <p> $ 39500</p>
+                    <button class="button-buy">Comprar</button>
+
+                </div>
+                <div class="product-container">
+                    <h3>Nombre :</h3>
+                    <img src="images/store/producto9.jpg" alt="">
+                    <p> $ 39500</p>
+                    <button class="button-buy">Comprar</button>
+
+                </div>
+                <div class="product-container">
+                    <h3>Nombre :</h3>
+                    <img src="images/store/producto10.jpg" alt="">
+                    <p> $ 39500</p>
+                    <button class="button-buy">Comprar</button>
+
+                </div>
+                <div class="product-container">
+                    <h3>Nombre :</h3>
+                    <img src="images/store/producto11.jpg" alt="">
+                    <p> $ 39500</p>
+                    <button class="button-buy">Comprar</button>
+
+                </div>
+                <div class="product-container">
+                    <h3>Nombre :</h3>
+                    <img src="images/store/producto12.jpg" alt="">
+                    <p> $ 39500</p>
+                    <button class="button-buy">Comprar</button>
+
+                </div>
+                <div class="product-container">
+                    <h3>Nombre :</h3>
+                    <img src="images/store/producto13.jpg" alt="">
+                    <p> $ 39500</p>
+                    <button class="button-buy">Comprar</button>
+
+                </div>
+                <div class="product-container">
+                    <h3>Nombre :</h3>
+                    <img src="images/store/producto1.jpg" alt="">
+                    <p> $ 39500</p>
+                    <button class="button-buy">Comprar</button>
+                </div>
+            </div>
+            </div>
+            <%- include ("./partials/footer")%>
+
 </body>
+
 </html>
