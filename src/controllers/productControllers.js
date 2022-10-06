@@ -41,6 +41,7 @@ const controller = {
     store: (req, res) => {
         res.render("store");
     }, 
+    
 
     productDetail: (req, res) => {
         let productId = req.params.id;

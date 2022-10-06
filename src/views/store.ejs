@@ -14,7 +14,15 @@
 
 </head>
     <%- include ("./partials/headerMain")%>
-    <%- include ("./partials/headerNavBar")%>
+    <nav class="navegacion">
+        <ul>
+            <li><a href="/store">Hoodies</a></li>
+            <li><a href="#jeans">Jeans</a></li>
+            <li><a href="#remeras">Remeras</a></li>
+            <li><a href="#camperas">Camperas</a></li>
+            <li><a href="#totebag">Tote bag</a></li>
+        </ul>
+    </nav>
 
         <body>
 
@@ -24,7 +32,7 @@
             </div>
 
             <div class="store-subtitulo">
-                <h3>HOODIES</h3>
+                <h3 id="hoodies">HOODIES</h3>
             </div>
 
             <div class="page-products">
@@ -46,7 +54,7 @@
             </div>
 
             <div class="store-subtitulo">
-                <h3>JEANS</h3>
+                <h3 id="jeans">JEANS</h3>
             </div>
 
             <div class="page-products">
@@ -76,14 +84,14 @@
             </div>
 
             <div class="store-subtitulo">
-                <h3>REMERAS</h3>
+                <h3 id="remeras">REMERAS</h3>
             </div>
 
             <div class="page-products">
 
                 <div class="product-container">
                     <h3>Remera Azul</h3>
-                    <img src="images/store/producto1.jpg" alt="">
+                    <img src="/images/store/producto1.jpg" alt="">
                     <p> $ 40000</p>
                     <button class="button-buy" onclick="add('producto1', 39500)">Comprar</button>
 
@@ -130,7 +138,7 @@
             </div>
 
             <div class="store-subtitulo">
-                <h3>CAMPERAS</h3>
+                <h3 id="camperas">CAMPERAS</h3>
             </div>
 
             <div class="page-products">
@@ -147,7 +155,7 @@
             </div>
 
             <div class="store-subtitulo">
-                <h3>TOTE BAG</h3>
+                <h3 id="totebag">TOTE BAG</h3>
             </div>
 
             <div class="page-products">
