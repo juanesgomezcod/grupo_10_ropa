@@ -1,8 +1,8 @@
 let productos = [
     {
         id:1,
-        nombreProducto:'Camiseta Azul',
-        descripcion: 'Camiseta Azul con estampado amarillo',
+        nombreProducto:'Remera Azul',
+        descripcion: 'Remera Azul con estampado amarillo',
         categoria: 'Remeras',
         img: 'producto1.jpg',
         tamaño: 'L',
@@ -10,8 +10,8 @@ let productos = [
     },
     {
         id:2,
-        nombreProducto:'Tote Bag con Negro',
-        descripcion: 'Tote Bag Beige con estampado en negro',
+        nombreProducto:'Tote Bag letras negras',
+        descripcion: 'Tote Bag Beige con estampado en color negro',
         categoria: 'Tote Bag',
         img: 'producto2.jpg',
         tamaño: 'S',
@@ -19,8 +19,8 @@ let productos = [
     },
     {
         id:3,
-        nombreProducto:'Tote Bag con Cafe',
-        descripcion: 'Tote Bag Beige con estampado en cafe',
+        nombreProducto:'Tote Bag letras cafes',
+        descripcion: 'Tote Bag Beige con estampado en color cafe',
         categoria: 'Tote Bag',
         img: 'producto3.jpg',
         tamaño: 'S',

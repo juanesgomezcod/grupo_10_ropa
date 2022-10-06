@@ -16,7 +16,12 @@ body{
   font-size: 20px;
   text-align: center;
 }
-.page-content{
+.store-subtitulo{
+  margin: 20px 20px 20px 150px;
+  font-size: 20px;
+  text-align: left;
+}
+.page-products{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
