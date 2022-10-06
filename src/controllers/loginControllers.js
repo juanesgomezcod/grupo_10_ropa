@@ -3,8 +3,6 @@ const controller = {
         res.render("login");
     
     }
-    
     }     
-
 
 module.exports = controller; 
