@@ -5,13 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle de Producto</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"/>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/js/v4-shims.js" rel="stylesheet"></script> 
+    <link href="https://use.fontawesome.com/releases/v5.0.4/js/fontawesome.js" rel="stylesheet"> </script>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <%- include ("./partials/headerMain")%>
+    <%- include("./partials/headerMain") %>
     <main>
-    <%- include ("./partials/headerNavBar")%>
-    <h3><%=product.nombreProducto%></h3>
+    <%- include("./partials/headerNavBar") %>
+    <h1> <%= product.nombreProducto %> </h1>
+    <div> <%= product.descripcion %> </div>
+    <div> <%= product.categoria %> </div>
+    <div> <%= product.tamaño %> </div>
+    <div> <%= product.precio %> </div>
+    
     </main>
-    <%- include ("./partials/footer")%>
+    <%- include("./partials/footer")%>
 </body>
 </html>
