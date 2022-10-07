@@ -22,4 +22,8 @@ Se eligió el listado de sitios anteriormente comentados, puesto que algunos de 
 
 link trello: https://trello.com/b/ywliq84S/proyecto-grupo-10
 
-Retrospectiva: En general para el primer sprint trabajamos bien, aprendimos que debemos de tener mas comunicacion entre los miembros del grupo y que debemos reunirnos minimo una vez a la semana para ver como vamos todos los miembros con el trabajo y si tenemos alguna duda.
+Retrospectiva Sprint 1: En general para el primer sprint trabajamos bien, aprendimos que debemos de tener mas comunicacion entre los miembros del grupo y que debemos reunirnos minimo una vez a la semana para ver como vamos todos los miembros con el trabajo y si tenemos alguna duda.
+
+Retrospectiva Sprint 2: No hubo buena comunicacion asertiva, no hubo trabajo en equipo. La asignacion de tareas se llevo a cabo, sin embargo el cumplimiento de las tareas solo se llevo a cabo por 2 miembros del equipo lo cual retraso el desarrollo del sprint.
+Realizamos todas las consignas buscando cumplir a cabalidad los requerimientos, tratando de estructurar de la mejor manera el proyecto.
+Debemos comenzar a repartir equitativamente las tareas y cumplir con los cronogramas establecidos para lograr desarrollar el proyecto de forma completa.
