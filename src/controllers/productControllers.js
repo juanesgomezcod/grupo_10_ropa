@@ -31,20 +31,33 @@ const controller = {
         res.render("productCart");
     }, 
 
+    
 
-    // Crear Nuevo producto
-    newProduct : (req, res) => {
+    // Crear Nuevo producto en el formulario
+    nuevo : (req, res) => {
         res.render("newProduct");
 
-        // let newProduct = {
-		// 	id: products[products.length - 1].id + 1,
-		// 	...req.body,
-		// 	image: image
-		// };
-		// products.push(newProduct)
-		// fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		// res.redirect('/');
-    }
+    },
+
+    // nuevo producto para guardar
+    adicional: (req, res) => {
+		let image
+		console.log(req.files);
+		if(req.files[0] != undefined){
+			image = req.files[0].filename
+		} else {
+			image = 'default-image.png'
+		}
+		let newProduct = {
+			id: products[products.length - 1].id + 1,
+			...req.body,
+			image: image
+		};
+		products.push(newProduct)
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+		res.redirect('/store');
+	}
+
     };
 
 module.exports = controller;

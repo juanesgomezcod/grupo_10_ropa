@@ -25,7 +25,8 @@ router.get('/store', controller.store);
 router.get('/productDetail/:id', controller.productDetail);
 
 //crear nuevo producto
-router.get('/newProduct', controller.newProduct);
+router.get('/newProduct', controller.nuevo);
+router.post('/', upload.any(), controller.adicional)
 
 
 router.get('/productCart', controller.productCart);
