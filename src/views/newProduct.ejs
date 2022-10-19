@@ -11,7 +11,7 @@
 
 <body>
     <%- include ("./partials/headerMain")%>
-        <form action="/newProduct" method="post">
+        <form action="/store" method="POST" enctype="multipart/form-data">
             <div class="register-container">
 
                 <h1 class="title">Creacion y Edicion de Productos</h1>
@@ -31,30 +31,30 @@
                     <h4>Elije tu foto de producto</h4>
                     <br>
             
-                <input type="file" accept=".jpg,.png" name="fotoProducto" class="productos" id="fotoProducto">
+                <input type="file" accept=".jpg,.png" name="imagen" class="productos" id="fotoProducto">
                 </div>
 
                 <div class="inputs">
-                    <p>Tamaños</p>
+                    <p>Tamaño</p>
                 <div class="tamaños">
                     <div>
                         <label for="S">
-                            <input type="checkbox" name="S" value="S" class="tallas" id="S">
+                            <input type="radio" name="S" value="S" class="tallas" id="S">
                             S</label>
                     </div>
                     <div>
                         <label for="M">
-                            <input type="checkbox" name="M" value="M" class="tallas" id="M">
+                            <input type="radio" name="M" value="M" class="tallas" id="M">
                             M</label>
                     </div>
                     <div>
                         <label for="L">
-                            <input type="checkbox" name="L" value="L" class="tallas" id="L">
+                            <input type="radio" name="L" value="L" class="tallas" id="L">
                             L</label>
                     </div>
                     <div>
                         <label for="XL">
-                            <input type="checkbox" name="XL" value="XL" class="tallas" id="XL">
+                            <input type="radio" name="XL" value="XL" class="tallas" id="XL">
                             XL</label>
                     </div>
                     <div class="inputs">
