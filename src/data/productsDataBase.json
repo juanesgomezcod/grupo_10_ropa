@@ -4,7 +4,7 @@
   "nombreProducto": "Remera Azul",
   "descripcion": "Remera Azul con estampado amarillo",
   "categoria": "Remeras",
-  "img": "producto1.jpg",
+  "image": "producto1.jpg",
   "tamaño": "L",
   "precio": 39500
  },
@@ -13,7 +13,7 @@
   "nombreProducto": "Tote Bag letras negras",
   "descripcion": "Tote Bag Beige con estampado en color negro",
   "categoria": "Tote Bag",
-  "img": "producto2.jpg",
+  "image": "producto2.jpg",
   "tamaño": "S",
   "precio": 39500
  },
@@ -22,7 +22,7 @@
   "nombreProducto": "Tote Bag letras cafes",
   "descripcion": "Tote Bag Beige con estampado en color cafe",
   "categoria": "Tote Bag",
-  "img": "producto3.jpg",
+  "image": "producto3.jpg",
   "tamaño": "S",
   "precio": 39500
  },
@@ -31,8 +31,35 @@
   "nombreProducto": "Jean Cruces",
   "descripcion": "Jean desgastado con estampados de cruces negras",
   "categoria": "Jeans",
-  "img": "producto4.jpg",
+  "image": "producto4.jpg",
   "tamaño": "XL",
   "precio": 39500
+ },
+ {
+  "id": 5,
+  "nombreProducto": "kjhjkhkj",
+  "descripcion": "kbnmbnm",
+  "categoria": "mnbnmb",
+  "M": "M",
+  "precio": "78000",
+  "image": "default-image.png"
+ },
+ {
+  "id": 6,
+  "nombreProducto": "kjhkjhj",
+  "descripcion": "lkjlkjlk",
+  "categoria": "lkmlklk",
+  "M": "M",
+  "precio": "89000",
+  "image": "default-image.png"
+ },
+ {
+  "id": 7,
+  "nombreProducto": "kjhkjh",
+  "descripcion": "lkjlkj",
+  "categoria": "oiuoi",
+  "M": "M",
+  "precio": "89000",
+  "image": "imagen-1666401341047.jpg"
  }
 ]

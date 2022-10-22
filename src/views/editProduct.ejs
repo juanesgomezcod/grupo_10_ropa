@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Creacion y Edicion de productos</title>
+</head>
+
+<body>
+    <%- include ("./partials/headerMain")%>
+        <form action="/store/edit <%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+            <div class="register-container">
+
+                <h1 class="title">Creacion y Edicion de Productos</h1>
+                <div class="inputs">
+                    <label for="nombreProducto">Nombre del Producto:</label>
+                    <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
+                </div>
+                <div class="inputs">
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion" required>
+                </div>
+                <div class="inputs">
+                    <label for="categoria">Categoria</label>
+                    <input type="text" name="categoria" id="categoria" placeholder="Categoria" required>
+                </div>
+                <div class="inputs">
+                    <h4>Elije tu foto de producto</h4>
+                    <br>
+            
+                <input type="file"  name="imagen" class="productos" id="fotoProducto">
+                </div>
+
+                <div class="inputs">
+                    <p>Tamaño</p>
+                <div class="tamaños">
+                    <div>
+                        <label for="S">
+                            <input type="radio" name="S" value="S" class="tallas" id="S">
+                            S</label>
+                    </div>
+                    <div>
+                        <label for="M">
+                            <input type="radio" name="M" value="M" class="tallas" id="M">
+                            M</label>
+                    </div>
+                    <div>
+                        <label for="L">
+                            <input type="radio" name="L" value="L" class="tallas" id="L">
+                            L</label>
+                    </div>
+                    <div>
+                        <label for="XL">
+                            <input type="radio" name="XL" value="XL" class="tallas" id="XL">
+                            XL</label>
+                    </div>
+                    <div class="inputs">
+                        <label for="precio">Precio</label>
+                        <input type="number" name="precio" id="precio" placeholder="precio" required>
+                    </div>
+                    
+                </div>
+                </div>
+                <br>
+            <br>
+            
+                <button type="submit">Crear Producto</button>
+                <button type="reset">Borrar</button>
+            <br>
+            <br>
+
+        </form>
+
+        <%- include ("./partials/footer")%>
+</body>
+
+</html>
