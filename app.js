@@ -3,11 +3,11 @@ const createError = require('http-errors');
 const express = require("express");
 const path = require ("path");
 const app = express();
-//const methodOverride =  require('method-override'); 
+const methodOverride =  require('method-override'); 
 
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.urlencoded({ extended: false }));
-//app.use(methodOverride('_method'));
+app.use(methodOverride('_method'));
 
 app.set('views',(path.join(__dirname ,"./src/views"))); 
 app.set('view engine', 'ejs');
@@ -20,6 +20,7 @@ const productRoutes = require('./src/routes/productRoutes');
 app.use('/', mainRoutes);
 app.use('/', userRoutes);
 app.use('/', productRoutes);
+
 
 
 

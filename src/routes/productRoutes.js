@@ -33,6 +33,7 @@ router.get('/edit/:id', controller.edit);
 router.patch('/edit/:id', upload.any(), controller.update); 
 
 //borrar un producto
+router.get('/delete/:id', controller.destroy); 
 router.delete('/delete/:id', controller.destroy); 
 
 router.get('/productCart', controller.productCart);

@@ -34,32 +34,5 @@
   "image": "producto4.jpg",
   "tamaño": "XL",
   "precio": 39500
- },
- {
-  "id": 5,
-  "nombreProducto": "kjhjkhkj",
-  "descripcion": "kbnmbnm",
-  "categoria": "mnbnmb",
-  "M": "M",
-  "precio": "78000",
-  "image": "default-image.png"
- },
- {
-  "id": 6,
-  "nombreProducto": "kjhkjhj",
-  "descripcion": "lkjlkjlk",
-  "categoria": "lkmlklk",
-  "M": "M",
-  "precio": "89000",
-  "image": "default-image.png"
- },
- {
-  "id": 7,
-  "nombreProducto": "kjhkjh",
-  "descripcion": "lkjlkj",
-  "categoria": "oiuoi",
-  "M": "M",
-  "precio": "89000",
-  "image": "imagen-1666401341047.jpg"
  }
 ]
