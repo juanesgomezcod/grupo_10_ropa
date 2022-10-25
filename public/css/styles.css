@@ -6,110 +6,118 @@
     font-family: Be Vietnam Pro;
 }
 
-header{
-    font-size: 10px;
-    background-image: url("/images/fondos/fondo1.jpg");
+/* Estilos de la sección Header */
+.header{
+    display: flex;
+    align-items: center;
+    background-image: url("/images/fondos/fondo_V07.jpg");
     background-repeat: repeat;
-    background-size: 200px;
+    background-size: 200px; 
 }
 
-main{
-    font-size: 10px;
+.logo{
+    width: 50px;
+    align-items: center;
+    margin: 10px 4px 10px 10px;
+    /* animation: neonEffect 5s infinite; */
+    background-color: #ffffff4d;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    background-image: url("/images/fondos/fondo_V07.jpg");
 }
 
-.logo img{
-    max-width: 40px;
-    margin: 8px 15px 1px 8px
+@keyframes neonEffect{
+    0%, 35%, 45%, 65%, 100%{
+       box-shadow: 
+        white 0 0 12px,
+        #EFFD6D 0 0 24px,
+        #EFFD6D 0 0 36px;
+    }
+
+    40%, 60%{
+        box-shadow: none;
+    }
+
 }
 
-.encabezado{
+.formularioDeBusqueda{
+    margin-left: 5px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    margin-right: 0px;
+}
+
+.formularioDeBusqueda input#search{
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-width: 0.3px;
+    border-radius: 5px;
+    border: none;
+    float: left;
+    padding-left: 30px;
+    color: white; 
+    background-color: transparent;
+
+    /* -webkit-transition: width .55s ease;
+    -moz-transition: width .55s ease;
+    -ms-transition: width .55s ease;
+    -o-transition: width .55s ease; */
+    transition: width .55s ease;
+}
+
+  .formularioDeBusqueda input#search::-webkit-input-placeholder {
+    color: white;
+ }
+
+ .formularioDeBusqueda .icon{
+    position: absolute;
+    top: 90%;
+    margin-left: 7px;
+    margin-top: 4px;
+    z-index: 1;
+    color: #EDEEE9;
+ }
+
+
+.formularioDeBusqueda input#search:focus, .formularioDeBusqueda input#search:active{
+    outline:none;
+    width: 230px;
+  }
+
+
+.login-carrito{
     display: flex;
     justify-content: space-between;
+    margin-left: 7px;
+    margin-right: 0px;
+} 
+
+.login-carrito a i{
+ color: white;
+} 
+
+.texto{
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-.login{
+.texto a{
     display: flex;
-    margin-top: 12px;
-}
-
-.login i{
-    color: white;
-    font-size: 20px;
-    margin: 7px 9px 3px 4px;
-    text-shadow: 0 0 1.5px red;
-    border-width: 0.1;
-}
-/* se debe arreglar el boton*/
-
-.texto-login a{
-
-    font-size: 7px;
+    align-items: center;
+    font-size: 10px;
     text-align: center;
     text-decoration: none;
-    display: none;
-    border: solid 1px black; 
+    border: solid 1p white; 
     border-radius: 5px; 
-    padding: 3px 2px 3px 2px; 
-    margin-right: 16px;
-    /* width: 28%;
-    padding: 8px 1px 8px 1px; 
-    margin: 0px 100px 0px 100px; */
-    background-color: #848484; 
-    /* color: #ffffff; 
-    text-align: center; */
-}
-
-.bolsa i{
-    color: white;
-    font-size: 20px;
-    margin: 3px 15px 3px 4px;
-    text-shadow: 0 0 1.5px red;
-}
-
-/* se debe arreglar el boton*/
-.carritocompras a{
-    text-align: center;
-    text-decoration: none;
+    padding: 5px 5px 5px 5px; 
+    margin-right: 10px;
+    margin-left: 4px;
     color: black;
-    display: none;
-    border: solid 1px black; 
-    border-radius: 5px; 
-    padding: 3px 2px 3px 2px; 
-    margin-right: 16px;
-    opacity: 0.2;
-    background-image: url("/images/fondos/fondo_1_header_horizontal.jpg")
-}
-
-.busqueda{
-    width: 90%;
-    text-align: center;
-    margin: 19px 0px 0px -35px;
-}
-
-.search-bar{
-    width: 70%;
-    border-width: 1px;
-    border-radius: 4px;
-    background-image: url("/images/fondos/fondo_1_header_horizontal.jpg");
-    opacity: 0.2;
-    border-color: #ffffff;
-}
-
-button{
-    background-color: transparent;
-    border: none;
-    color: white;
-    width: 40%px;
-    text-shadow: 0 0 1.5px red;
-}
-
-.fasfa-search{
-    background-color: black;
-}
-
-.compras{
-    display: flex;
-    margin-top: 15px;
+    background-color: #848484; 
+    background: linear-gradient(to right, gray, white);
 }
 
 /* estilos Guia de tallas, como encargar, banner */
@@ -278,12 +286,23 @@ border-top: 0.5px solid black;
   padding: 0;
   margin: 20px;
 }
+@media (min-width: 388px) and (max-width: 400px){
+    .logo{
+        margin-left: 20px;
+    }
+    .login-carrito{
+        margin-left: 7px;
+    }
+}
 
-
+@media (max-width: 400px){
+    .texto a{
+        display: none;
+    }
+}
 
 @media (min-width: 480px){
    
-
     .tres_columnas{
         display: flex;
         justify-content: space-around;
@@ -299,9 +318,22 @@ border-top: 0.5px solid black;
         color: black;
         display: block;
     }
+
+    .login-carrito{
+        margin-left: 100px;
+    }
 }
 
 @media (min-width: 780px){
+
+    .logo{
+        margin-left: 20px;
+    }
+
+    .login-carrito{
+        margin-left: 480px;
+    }
+
     .navegacion ul li {
         font-size: 25px;
     }
@@ -315,11 +347,6 @@ border-top: 0.5px solid black;
         display: block;
     }
 
-    /* .main_inferior{
-        display: inline-flexbox;
-        justify-content: space-between;
-
-    } */
 
     .tres_columnas{
         display: flex;

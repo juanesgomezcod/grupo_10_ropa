@@ -1,29 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="/images/logo/favicon.ico">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/86a97245b7.js" crossorigin="anonymous"></script>
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+</head>
 <header>
-    <div class="encabezado">
+    <div class="header">
         <section>
-            <div class="logo">
-            <a href="/"><img src="/images/Logo/logo.png"></a>
-            </div>
+            <a href="/"><img class="logo" src="/images/Logo/logo.png"></a>
         </section>
-        <div class = "busqueda">
-            <input class="search-bar"></input>
-            <button class="fas fa-search"></button>
+
+        <div class="busqueda">
+            <form class="formularioDeBusqueda" action="" method="get">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="search" id="search" placeholder="Buscar productos..." />
+            </form>
         </div>
-        <div class="login">
-            <div >
-                <a href="/login"><i class="far fa-user-circle"></i></a> 
-            </div>
-            <div class="texto-login">
-                <p><a href="/login">Iniciar sesión</a></p>
-            </div>
-        </div>
-        <div class="compras">
-            <div class="bolsa">
-                <a href="/productCart"><i class="fas fa-shopping-bag"></i></a>
-            </div>
-            <div class="carritocompras">
-                <p><a href="/productCart">Carrito de compras</a></p>
-            </div>
+
+        <div class="login-carrito">
+            <a href="/login"><i class="far fa-user"></i></a>
+            <p class="texto"><a href="/login"> Iniciar sesión</a></p>
+            <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+            <p class="texto"><a href="/productCart"> Carrito de compras </a></p>
         </div>
     </div>
-    </header>
+</header>
+
+</html>
