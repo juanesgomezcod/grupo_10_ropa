@@ -7,18 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swip - Moda personalizada</title>
     <link rel="shortcut icon" href="/images/logo/favicon.ico">
+    <link rel="stylesheet" href="/css/cartStyle.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/productCart.css">
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <header>
-        <div class="encabezado">
+       <%- include ("./partials/headerMain")%>
+       
+       <!-- <div class="encabezado">
             <section>
                 <div class="logo">
-                    <a href="/"><img src="/images/Logo/logo.png"></a>
+                    <a href="./src/views/index.html"><img src="/images/Logo/logo.png"></a>
                 </div>
             </section>
             <div class="pasos">
@@ -32,60 +35,121 @@
                     <div class="pasos_compra">Pago</div>
                 </i>
             </div>
-        </div>
+        </div> -->
     </header>
     <main>
-        <section>
-            <div class="productos">
-                <div class="lista">
-                    <div>
-                        <p>Lista de productos</p>
-                    </div>
-                    <div class="producto-imagen"><img src="/images/imagenes ropa/ropa1.jpg" alt=""></div>
-                </div>
-                <div class="resumen_compra">
-                    <div class="nombre_producto">
-                        <p>nombre del producto</p>
-                    </div>
-                    <div class="cantidad">
-                        <p>cantidad</p>
-                        <div>
-                            --
-                        </div>
-                    </div>
-                    <div class="Precio">
-                        <p>precio</p>
-                        <div>
-                            --
-                        </div>
-                    </div>
-                    <div class="factura">
-                        <p>Total</p>
-                    </div>
-                </div>
-                <div class="comprar">
-                    <button class="boton_compras">Comprar</button>
-                </div>
-                <div class="terminos">
-                    <h4>Terminos y condiciones</h4>
-                    <p>
-                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, aut libero dolorem molestiae est id nulla reprehenderit, optio dicta iusto dolorum officiis corrupti minima minus commodi iure! Similique, explicabo atque.
-                    </p>
-                </div>
-
-            </div>
-
-            <div>
-                <!-- <h1>Lista de productos</h1>
-                <p>Nombre del Producto</p>
-                <p>Cantidad</p>
-                <p>precio</p> -->
-            </div>
-
+        <section id="blog-home" class="pt-5 mt-5 container">
+            <h2 class="Shoppin-cart">Shopping Cart</h2>
+            <hr>
         </section>
+    
+    
+        <section id="#" class="cart-container">
+            <table width="75%">
+                <thead>
+                    <tr class="tr-magic">
+                        <td>Delete</td>
+                        <td>Imagen</td>
+                        <td>Producto</td>
+                        <td>Precio</td>
+                        <td>Cantidad</td>
+                        <td>Total</td>
+                    </tr>
+                </thead>
+    
+    
+                <tbody>
+                    <tr>
+                        <td><a href="#"><i class='bx bx-trash'></i></a></td>
+                        <td><img src="/images/store/producto1.jpg" alt=""></td>
+                        <td>
+                            <h3>Camiseta Estampada Blue</h3>
+                        </td>
+                        <td>
+                            <h3>$65</h3>
+                        </td>
+                        <td > <input class="w-25 pl-1" value="1" type="number"></td>
+                        <td>
+                            <h3>$130</h3>
+                        </td>
+    
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class='bx bx-trash'></i></a></td>
+                        <td><img src="/images/store/producto10.jpg" alt=""></td>
+                        <td>
+                            <h3>Camiseta Estampada Black</h3>
+                        </td>
+                        <td>
+                            <h3>$65</h3>
+                        </td>
+                        <td> <input class="w-25 pl-1" value="1" type="number"></td>
+                        <td>
+                            <h3>$130</h3>
+                        </td>
+    
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class='bx bx-trash'></i></a></td>
+                        <td><img src="images/store/producto5.jpg" alt=""></td>
+                        <td>
+                            <h3>Pantalon Estampado Red wine</h3>
+                        </td>
+                        <td>
+                            <h3>$65</h3>
+                        </td>
+                        <td> <input class="w-25 pl-1" value="1" type="number"></td>
+                        <td>
+                            <h3>$130</h3>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="cart-bottom" class="container">
+            <div class="row">
+                <div class="cupon col-lg-6 col-md-6 col-12 mb-4">
+                    <div class="cupon1">
+                        <h4>CUPON</h4>
+                        <P>!! Coloca tu Codigo de cupon Si lo tienes ¡¡¡</P>
+                        <input type="text" placeholder="Codigo Cupon">
+                        <button class="bt1">APLICA TU CUPON</button>
+                    </div>
+                </div>
+                <div class="total col-lg-6 col-md-6 col-12 mb-4">
+                    <div class="total-check">
+                        <h4>TOTAL CARRITO</h4>
+                        <div class="cupon2">
+                            <h3>Subtotal</h3>
+                            <p>$215.00</p>
+                        </div>
+                        <div class="cupon2">
+                            <h3>Envio</h3>
+                            <p>$215.00</p>
+                        </div>
+                        <hr class="second-hr">
+                        <div class="cupon2">
+                            <h3>Total</h3>
+                            <p>$215.00</p>
+                        </div>
+    
+                        <button class="ml-auto">PROCEDER A CHECKOUT</button>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+        <div class="terminos">
+            <h4 >Terminos y condiciones</h4>
+            <p>
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, aut libero dolorem molestiae est id nulla reprehenderit, optio dicta iusto dolorum officiis corrupti minima minus commodi iure! Similique, explicabo atque.
+            </p>
+        </div>
+
     </main>
     <footer>
-        <div class="tres_columnas">
+        <%- include ("./partials/footer")%>
+        <!--<div class="tres_columnas">
         <div class="col1footer">
             <section>
                 <h4>Ayuda</h4>
@@ -113,7 +177,7 @@
     </div>
         <div class="derechos">
             <p>@SWIP, Todos los derechos reservados</p>
-        </div>
+        </div>-->
     </footer>
 </body>
 

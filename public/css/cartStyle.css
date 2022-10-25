@@ -1,0 +1,174 @@
+/*Cart*/
+
+
+.cart-container {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+
+}
+
+.cart-container table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+    border-radius: 10px;
+    white-space: nowrap;
+
+}
+
+.cart-container table thead {
+    font-weight: 900;
+
+}
+
+.cart-container table {
+    background: #f7f5f5;
+    color: rgb(44, 42, 42);
+    border: none;
+    padding: 6px 0;
+}
+
+.tr-magic {
+    background: #14A4C8;
+    height: 30px;
+
+}
+
+.cart-container table td {
+    border: 1px solid #b6b3b3;
+    text-align: center;
+    padding: 5px;
+}
+
+.cart-container table tbody img {
+    width: 200px;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+
+}
+.terminos{
+    text-align: center;
+    font-size: 14px;
+}
+
+.cart-container table td {
+    border: 1px solid #b6b3b3;
+    text-align: center;
+}
+
+.cart-container table td:nth-child(1) {
+    width: 200px;
+
+}
+
+.cart-container table td:nth-child(2),
+.cart-container table td:nth-child(3) {
+    width: 400px;
+}
+
+.cart-container table td:nth-child(4),
+.cart-container table td:nth-child(5),
+.cart-container table td:nth-child(6) {
+    width: 300px;
+}
+
+.cart-container table tbody i {
+    color: black;
+}
+
+.cart-bottom .cupon>div,
+.cart-bottom .total>div {
+    border: 1px solid #b6b3b3;
+    ;
+}
+
+.bt1 {
+    width: 150px;
+    height: 50px;
+    background: hsl(192, 82%, 43%);
+}
+
+.ml-auto {
+    width: 200px;
+    height: 50px;
+    background: hsl(192, 82%, 43%);
+    padding: 15px 19px 0 15px;
+    
+
+}
+/*#cart-bottom{
+    
+ display: flex;
+ flex-wrap: wrap;
+}*/
+
+
+#cart-bottom .cupon h4,
+#cart-bottom .total h4 {
+    background: hsl(192, 82%, 43%);
+    color: rgb(44, 42, 42);
+    border: none;
+    padding: 6px 12px;
+    font-weight: 700;
+}
+
+#cart-bottom .cupon p,
+#cart-bottom .cupon input {
+    padding: 0 12px;
+
+}
+
+#cart-bottom .cupon input {
+    height: 44px;
+}
+
+#cart-bottom .cupon input {
+    margin: 0 0 29px 12px;
+}
+
+#cart-bottom .total div>div {
+    padding: 0 12px;
+}
+
+#cart-bottom .total h5 {
+    color: #2a2a2a;
+}
+
+#second-hr {
+    background: #b8b7b3;
+    width: 100%;
+    height: 1px;
+
+}
+
+#cart-bottom .total div>button {
+    margin: 0 12px 20px 0;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.cupon{
+   width: 800px;
+}
+.total{
+    width:800px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.total-check{
+    justify-content: center;
+   
+}
+.cupon2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
