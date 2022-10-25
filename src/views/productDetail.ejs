@@ -16,11 +16,15 @@
     <%- include("./partials/headerMain") %>
     <main>
     <%- include("./partials/headerNavBar") %>
-    <h1> <%= product.nombreProducto %> </h1>
-    <div> <%= product.descripcion %> </div>
-    <div> <%= product.categoria %> </div>
-    <div> <%= product.tamaño %> </div>
-    <div> <%= product.precio %> </div>
+    <div class="product-container">
+        <h3>Nombre : <%= product.nombreProducto %> </h3>
+        <h4>Talla : <%= product.tamaño %> </h4>
+        <img src= "/images/store/<%= product.image %>">
+        <p> $<%= (product.precio) %></p>
+        <p><%= (product.descripcion) %></p>
+        <button class="button-buy">Comprar</button>
+
+    </div> 
     
     </main>
     <%- include("./partials/footer")%>

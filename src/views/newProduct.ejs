@@ -14,7 +14,7 @@
         <form action="/store" method="POST" enctype="multipart/form-data">
 
             <div class="formulario">
-                <h3 class="title">Creación y Edición de Productos</h3>
+                <h3 class="title">Creación de Nuevos Productos</h3>
                 <div class="inputs-1">
                     <label for="nombreProducto">Nombre </label>
                     <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto"
@@ -25,8 +25,14 @@
                     <input type="text" name="descripcion" id="descripcion" placeholder="Descripción" required>
                 </div>
                 <div class="inputs-3">
-                    <label for="categoria">Categoría </label>
-                    <input type="text" name="categoria" id="categoria" placeholder="Hoodie, Remera, Jean..." required>
+                    <label for="categoria">Categoria:</label>
+                    <select name="category" id="category" class="form-input">
+                        <option value="">Hoodies</option>
+                        <option value="">Jeans</option>
+                        <option value="" >Remeras</option>
+                        <option value="" >Camperas</option>
+                        <option value="" >Tote Bag</option>
+                    </select>
                 </div>
                 <div class="inputs-4">
                     <h4 class="title">Elije la foto del producto</h4>

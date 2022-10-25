@@ -91,7 +91,7 @@ const controller = {
 		})
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-		res.redirect('/store');
+		res.redirect('/');
 	},
 
     // Borrar un producto de la base de datos

@@ -34,5 +34,14 @@
   "image": "producto4.jpg",
   "tamaño": "XL",
   "precio": 39500
+ },
+ {
+  "id": 5,
+  "nombreProducto": "juajaua",
+  "descripcion": "kjndkjsjkd",
+  "category": "",
+  "S": "S",
+  "precio": "54211",
+  "image": "imagen-1666713909546.jpg"
  }
 ]
