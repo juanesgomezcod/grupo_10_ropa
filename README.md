@@ -27,3 +27,17 @@ Retrospectiva Sprint 1: En general para el primer sprint trabajamos bien, aprend
 Retrospectiva Sprint 2: No hubo buena comunicacion asertiva, no hubo trabajo en equipo. La asignacion de tareas se llevo a cabo, sin embargo el cumplimiento de las tareas solo se llevo a cabo por 2 miembros del equipo lo cual retraso el desarrollo del sprint.
 Realizamos todas las consignas buscando cumplir a cabalidad los requerimientos, tratando de estructurar de la mejor manera el proyecto.
 Debemos comenzar a repartir equitativamente las tareas y cumplir con los cronogramas establecidos para lograr desarrollar el proyecto de forma completa.
+
+Retrospectiva Sprint 3
+Retrospectiva:
+
+1. Comenzar a hacer
+ 1.1 Definir tiempos específicos para la realización de tareas, las cuales deben ser entregadas en un periodo determinado con el fin de completar todas las actividades.
+2. Hacer más
+ 2.1 Asignar tareas de manera equitativa, teniendo en cuenta las prioridades y el tiempo de ejecución 
+3. Continuar haciendo
+ 3.1 Establecer reuniones periódicas que permitan retroalimentación, control y desarrollo de las actividades
+4. Hacer menos 
+ 4.1 No contar con una comunicación constante relacionada al avance de las actividades asignadas
+5. Dejar de hacer
+ 5.1 Asignar tareas sin un continúo seguimiento
