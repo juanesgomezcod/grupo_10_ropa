@@ -16,5 +16,14 @@
         "email": "feliperivera@gmail.com",
         "password": "muskdshkjds3",
         "image": "usuario2.jpg"
+       },
+       {
+        "id": 3,
+        "nombreUsuario": "Mauro",
+        "apellidos": "Ochoa",
+        "tipo": "user",
+        "email": "mauro8a@gmail.com",
+        "password": "muskdshkjds3",
+        "image": "usuario3.jpg"
        }
    ]
