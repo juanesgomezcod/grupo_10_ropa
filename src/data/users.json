@@ -1,0 +1,20 @@
+[
+    {
+     "id": 1,
+     "nombreUsuario": "Andres",
+     "apellidos": "Perez",
+     "tipo": "admin",
+     "email": "andres.perez@gmail.com",
+     "password": "musica3",
+     "image": "usuario1.jpg"
+    },
+    {
+        "id": 2,
+        "nombreUsuario": "Felipe",
+        "apellidos": "Rivera Ochoa",
+        "tipo": "user",
+        "email": "feliperivera@gmail.com",
+        "password": "muskdshkjds3",
+        "image": "usuario2.jpg"
+       }
+   ]
