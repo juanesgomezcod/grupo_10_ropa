@@ -33,3 +33,18 @@ Retrospectiva sprint 4:
  4.1 No contar con una comunicación constante relacionada al avance de las actividades asignadas
 5. Dejar de hacer
  5.1 Asignar tareas sin un continúo seguimiento
+ 
+ 
+ Retrospectiva sprint 5
+ 
+ 1. Comenzar a hacer
+  Completar TODAS las actividades solicitadas en el sprint en el tiempo establecido.
+ 2. Hacer más
+  Establecer reuniones periódicas que permitan  ver fallas, darle un buen manejo al tiempo y seguir desarrollando las actividades.
+ 3. Continuar haciendo
+  Asignar tareas a los integrantes del equipo y darle un debido seguimiento.
+  Comunicacion constante entre los miembros del equipo.
+ 4. Hacer menos 
+  En este sprint no hicimos commits constantes en github, y estamos poniendo en riesgo el avance del proyecto en caso de un accidente.
+ 5. Dejar de hacer
+  Dejar para los ultimos dias las tareas mas complicadas.
