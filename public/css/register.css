@@ -1,4 +1,25 @@
 .tituloregistro{
+    margin-top: 20px; 
+}
+
+.registrarse{
+    margin-top: 20px;
+    border-color: black;
+}
+
+.texto-error{
+    color: red;
+    width: 5px;
+}
+
+.avatar{
+    display: flex;
+    justify-content: center;
+    margin: 17px;
+}
+
+
+.tituloregistro{
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
@@ -8,36 +29,43 @@
 .nombreregistro{
     display: flex;
     justify-content: center;
+    margin: 5px;
     
 }
 
 .apellidosregistro{
     display: flex;
     justify-content: center;
+    margin: 5px;
 }
 
 .emaillogin{
     display: flex;
     justify-content: center;
+    margin: 5px;
 }
 
 .emaillogin label{
     display: flex;
     justify-content: center;
+    margin: 5px;
 }
 
 .passwordlogin{
     display: flex;
     justify-content: center;
+    margin: 5px;
     
 }
 
 .passwordconfirm{
     display: flex;
     justify-content: center;
+    margin: 5px;
 }
 
 .botonregistro{
     display: flex;
     justify-content: center; 
+   
 }
