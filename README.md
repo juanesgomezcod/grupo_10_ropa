@@ -4,10 +4,8 @@ La marca de ropa SWIP ofrece productos de moda personalizados y diseñados por l
 
 
 Integrantes del Grupo:
-Lautaro Muñoz
+
 Julieth Paola Olarte - Soy ingeniera ambiental, de la ciudad de Bogotá, Colombia; tengo 22 años y me gustaría desempeñarme en el rol de Front-end.
-David Cuentas - Especialista en Gerencia Educativa, actualmente laborando en Institución educativa como docente. Soy de Colombia, Cartagena.
-Milagros Lencinas - Tengo 20 años, vivo en Argentina Buenos Aires y estudie un tiempo psicología e hice cursos sobre estética.
 Juan Esteban Gomez - Soy administrador de Negocios, tengo 39 años y vivo en Medellin-Colombia.
 
 paginas de referencia
@@ -35,3 +33,18 @@ Retrospectiva sprint 4:
  4.1 No contar con una comunicación constante relacionada al avance de las actividades asignadas
 5. Dejar de hacer
  5.1 Asignar tareas sin un continúo seguimiento
+ 
+ 
+ Retrospectiva sprint 5
+ 
+ 1. Comenzar a hacer
+  Completar TODAS las actividades solicitadas en el sprint en el tiempo establecido.
+ 2. Hacer más
+  Establecer reuniones periódicas que permitan  ver fallas, darle un buen manejo al tiempo y seguir desarrollando las actividades.
+ 3. Continuar haciendo
+  Asignar tareas a los integrantes del equipo y darle un debido seguimiento.
+  Comunicacion constante entre los miembros del equipo.
+ 4. Hacer menos 
+  En este sprint no hicimos commits constantes en github, y estamos poniendo en riesgo el avance del proyecto en caso de un accidente.
+ 5. Dejar de hacer
+  Dejar para los ultimos dias las tareas mas complicadas.
