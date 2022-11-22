@@ -1,29 +1,26 @@
 [
-    {
-     "id": 1,
-     "nombreUsuario": "Andres",
-     "apellidos": "Perez",
-     "tipo": "admin",
-     "email": "andres.perez@gmail.com",
-     "password": "musica3",
-     "image": "usuario1.jpg"
-    },
-    {
-        "id": 2,
-        "nombreUsuario": "Felipe",
-        "apellidos": "Rivera Ochoa",
-        "tipo": "user",
-        "email": "feliperivera@gmail.com",
-        "password": "muskdshkjds3",
-        "image": "usuario2.jpg"
-       },
-       {
-        "id": 3,
-        "nombreUsuario": "Mauro",
-        "apellidos": "Ochoa",
-        "tipo": "user",
-        "email": "mauro8a@gmail.com",
-        "password": "muskdshkjds3",
-        "image": "usuario3.jpg"
-       }
-   ]
+ {
+  "id": 1,
+  "nombre": "dsfsdf",
+  "apellidos": "sfsdfs",
+  "email": "julieth.olarte01@uptc.edu.co",
+  "contraseÃ±a": "123456",
+  "passwordconfirm": "123456"
+ },
+ {
+  "id": 2,
+  "nombre": "rgrege",
+  "apellidos": "rterte",
+  "email": "julieth.olarte01@uptc.edu.co",
+  "contraseÃ±a": "Hola123",
+  "passwordconfirm": "Hola123"
+ },
+ {
+  "id": 3,
+  "nombre": "dsfsdf",
+  "apellidos": "sfsdfs",
+  "email": "jolarte@hotmail.com.co",
+  "contraseÃ±a": "prueba1",
+  "passwordconfirm": "prueba1"
+ }
+]
