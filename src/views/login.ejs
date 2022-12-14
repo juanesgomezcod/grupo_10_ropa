@@ -2,40 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swip - login</title>
-    <link rel="stylesheet" href="./css/login.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swip - login</title>
+  <link rel="stylesheet" href="./css/login.css">
 </head>
 
 <body>
-    <%- include ("./partials/headerMain")%>
+  <%- include ("./partials/headerMain")%>
     <main>
+      <div class = formCompleto>
+        <div>
+          <!-- <h3>Bienvenid@ a SWIP</h3> -->
+          <!-- <img src="images/fondos/BASWIP.png" class="loginImage"> -->
+          <!-- <h4>¿No tíenes una cuenta?</h4> -->
+        </div>
         <form action="/login" method="POST">
           <div class="register-container">
-    
+
             <h1 class="title">Ingresar</h1>
             <div class="inputs">
               <label for="mail">Correo electrónico</label>
               <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
-            </div>  
+            </div>
             <div class="inputs">
               <label for="password">Contraseña</label>
               <input type="password" name="password" id="password" placeholder="Contraseña" required>
             </div>
             <div class="account-buttons">
-            <button type="submit" class="account sub">Iniciar sesión</button>
+              <button type="submit" class="account sub">Iniciar sesión</button>
             </div>
         </form>
         <h4>¿No tienes una cuenta? ¡Registrate!</h4>
         <br>
         <div class="account-buttons">
-            <button class="account sub"><a href="/register">Registrarse</a></button>
+          <button class="account sub"><a href="/register">Registrarse</a></button>
         </div>
-      </main>
-
-      <%- include ("./partials/footer")%>
+      </div>
+    </main>
+    <%- include ("./partials/footer")%>
 </body>
+
+
 
 </html>

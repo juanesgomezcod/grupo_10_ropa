@@ -19,7 +19,6 @@ const controller = {
         res.render("register");
     },
 
-
     //validacion y proceso de registro
     processRegister: (req, res) => {
         const resultadosValidar = validationResult(req);
@@ -92,10 +91,6 @@ const controller = {
             }
         })
      }
-
-
-
-
 };
 
 
