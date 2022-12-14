@@ -1,0 +1,106 @@
+.footer  {
+    background: linear-gradient(90deg, #1c3643,#273b47,25%,#1e5372);
+    padding: 30px  ;  
+    align-items: center; 
+    
+
+}
+.footer-col{
+    width: 30%;
+    padding: 0px; 
+    margin: 20px; 
+    
+}
+
+.img-footer{
+    width: 100px;
+    margin: 20px;
+    margin-bottom: -50px;
+    transition: all 0.3s ease;
+
+}
+.img-footer:hover{
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    box-shadow: 0px 0px 15px 15px #e5e2e0;
+    -webkit-box-shadow: 0px 0px 15px 15px #f8f6f5;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+} 
+
+ .footer-col h4{
+    font-size: 18px;
+    color: #fff;
+    text-transform:capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+}
+
+ 
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    /*background-color: #e91e63;*/
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left:  15px; 
+
+}
+
+.redes-sociales-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+ 
+}
+
+/* <!important;todo footer> */
+  .container-footer{
+    max-width: 100%;
+    margin:auto;
+    display: flex;
+    flex-grow: initial;
+}  
+
+ul {
+    list-style:none;
+}
+.row-icon img{
+    width: 35px;
+    height: 35px;
+}
+.dev-cont img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+
+
