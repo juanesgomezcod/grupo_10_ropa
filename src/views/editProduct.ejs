@@ -13,18 +13,18 @@
 <%- include ("./partials/headerMain")%>
 
     <body>
-        <form action="/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+        <form action="/edit/<%= productos.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
 
             <div class="formulario">
                 <h3 class="title">Edicion de Productos</h3>
                 <div class="inputs-1">
                     <label for="nombreProducto">Nombre </label>
-                    <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto"
+                    <input type="text" name="nombreProducto" id="nombreProducto" value="<%= productos.nombre %> " placeholder="Nombre del producto"
                         required>
                 </div>
                 <div class="inputs-2">
                     <label for="descripcion">Descripción </label>
-                    <input type="text" name="descripcion" id="descripcion" placeholder="Descripción" required>
+                    <input type="text" name="descripcion" id="descripcion" value="<%= productos.descripcion %> " placeholder="Descripción" required>
                 </div>
                 <div class="inputs-3">
                     <label for="categoria">Categoria:</label>
@@ -71,7 +71,7 @@
                         </div>
                         <div class="inputs-6">
                             <label for="precio">Precio</label>
-                            <input type="number" name="precio" id="precio" placeholder="precio $" required>
+                            <input type="number" name="precio" id="precio" value="<%= productos.precio %> "placeholder="precio $" required>
                         </div>
 
                     </div>

@@ -17,13 +17,18 @@
     <main>
     <%- include("./partials/headerNavBar") %>
     <div class="product-container">
-        <h3>Nombre : <%= product.nombreProducto %> </h3>
-        <h4>Talla : <%= product.tamaño %> </h4>
+        <h3>Nombre : <%= productos.nombre %> </h3>
+        <h4>Talla : <%= productos.talla.talla %> </h4>
         <img src= "/images/store/<%= product.image %>">
-        <p> $<%= (product.precio) %></p>
-        <p><%= (product.descripcion) %></p>
+        <p> $<%= (productos.precio) %></p>
+        <p><%= (productos.descripcion) %></p>
         <button class="button-buy">Comprar</button>
-
+        <a href="/edit/<%= productos.id %> ">
+        <button class="button-buy">editar</button>
+        </a>
+        <form action="/delete/<%= productos.id %> " method="POST">
+            <button type="submit" class="button-buy">borrar</button>
+            </form>
     </div> 
     
     </main>

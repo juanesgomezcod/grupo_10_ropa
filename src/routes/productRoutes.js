@@ -22,7 +22,7 @@ var upload = multer({storage: storage})
 router.get('/store', controller.store);
 
 //llamar un producto
-router.get('/productDetail/:id', controller.productDetail);
+router.get('/:id', controller.productDetail);
 
 //CREAR UN PRODUCTO
 router.get('/newProduct', controller.create);
@@ -33,8 +33,8 @@ router.get('/edit/:id', controller.edit);
 router.patch('/edit/:id', upload.any(), controller.update); 
 
 //borrar un producto
-router.get('/delete/:id', controller.destroy); 
-router.delete('/delete/:id', controller.destroy); 
+router.post('/delete/:id', controller.destroy); 
+
 
 router.get('/productCart', controller.productCart);
 
