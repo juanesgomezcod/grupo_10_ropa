@@ -26,12 +26,12 @@
                 </div>
                 <div class="inputs-3">
                     <label for="categoria">Categoria:</label>
-                    <select name="category" id="category" class="form-input">
-                        <option value="">Hoodies</option>
-                        <option value="">Jeans</option>
-                        <option value="" >Remeras</option>
-                        <option value="" >Camperas</option>
-                        <option value="" >Tote Bag</option>
+                    <select name="Categorias" id="category" class="form-input">
+                        <% for (let i=0; i < Categorias.length; i++) { %> 
+                            <option value="<%=Categorias[i].id%>">
+                                <%= Categorias[i].nombre %> 
+                            </option>
+                        <% } %> 
                     </select>
                 </div>
                 <div class="inputs-4">
@@ -42,31 +42,14 @@
                 <div class="inputs-5">
                     <h4>Tallas</h4>
                     <div class="tamaños">
+                        <% for (let i=0; i < tallas.length; i++) { %> 
                         <div>
-                            <label for="XS">
-                                <input type="radio" name="XS" value="XS" class="tallas" id="XS">
-                                XS</label>
+                            <label for=<%= Tallas[i].talla %>>
+                                <input type="radio" name=talla value=<%= Tallas[i].talla %> class="tallas" id=<%= Tallas[i].talla %>>
+                                <%= Tallas[i].talla %></label>
                         </div>
-                        <div>
-                            <label for="S">
-                                <input type="radio" name="S" value="S" class="tallas" id="S">
-                                S</label>
-                        </div>
-                        <div>
-                            <label for="M">
-                                <input type="radio" name="M" value="M" class="tallas" id="M">
-                                M</label>
-                        </div>
-                        <div>
-                            <label for="L">
-                                <input type="radio" name="L" value="L" class="tallas" id="L">
-                                L</label>
-                        </div>
-                        <div>
-                            <label for="XL">
-                                <input type="radio" name="XL" value="XL" class="tallas" id="XL">
-                                XL</label>
-                        </div>
+                        <% } %>
+                        
                         <div class="inputs-6">
                             <label for="precio">Precio</label>
                             <input type="number" name="precio" id="precio" placeholder="precio $" required>

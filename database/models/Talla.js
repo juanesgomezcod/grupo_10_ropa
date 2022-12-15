@@ -18,5 +18,13 @@ module.exports = (sequelize, DataTypes) => {
     };
     
     const Talla = sequelize.define(alias, cols, config);
+
+    Categorias.associate = function(models){
+        Tallas.hasMany(models.Productos, {
+            as:"productos",
+            foreignKey: "idtalla"
+        })
+    }
+
     return Talla;
 }

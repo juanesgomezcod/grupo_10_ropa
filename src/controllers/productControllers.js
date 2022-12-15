@@ -1,20 +1,20 @@
 const fs = require('fs');
 const path = require('path');
+let db = require("../../database/models")
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 const controller = {
-    store: (req, res) => {
-        res.render("store", {
-            products,
-            toThousand
-        })
-    
-		
-    }, 
+   
+	store: (req, res) => {
+		db.Productos.findAll()
+		.then(function(productos){
+			res.render("store", {products})
+		})
+	},
 
 
     // Detalle de un producto
@@ -35,27 +35,25 @@ const controller = {
 
     // Crear Nuevo producto en el formulario
     create : (req, res) => {
-        res.render("newProduct");
+		db.Categorias.findAll()
+		.then(function(categorias){
+			return res.render("newProduct",{categorias});
+		})
+        //aca tambien hay que llamar las tallas
 
     },
 
     // nuevo producto para guardar
     adicional: (req, res) => {
-		let image
-		console.log(req.files);
-		if(req.files[0] != undefined){
-			image = req.files[0].filename
-		} else {
-			image = 'default-image.png'
-		}
-		let nuevoProducto = {
-			id: products[products.length - 1].id + 1,
-			...req.body,
-			image: image,
-		};
-		products.push(nuevoProducto)
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/store');
+		db.products.create({
+			nombre: req.body.nombreProducto,
+			descripcion: req.body.descripcion,
+			precio: req.body.precio,
+			talla: req.body.talla,
+			categoria: req.body.Categorias
+		})
+		res.redirect("/store")
+		
 	},
 
     // formulario para editar

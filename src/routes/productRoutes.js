@@ -24,7 +24,7 @@ router.get('/store', controller.store);
 //llamar un producto
 router.get('/productDetail/:id', controller.productDetail);
 
-//crear nuevo producto
+//CREAR UN PRODUCTO
 router.get('/newProduct', controller.create);
 router.post('/store', upload.any(), controller.adicional)
 

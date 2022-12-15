@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         precio:{
             type: DataTypes.INTEGER
         },
-        idTalla:{
+        idtalla:{
             type: DataTypes.INTEGER
         },
         idcategoria:{
@@ -28,7 +28,26 @@ module.exports = (sequelize, DataTypes) => {
         tableName: "products",
         timestamps: false
     };
-    
+
     const Producto = sequelize.define(alias, cols, config);
+
+    Productos.associate = function(models){
+        Productos.belongsTo(models.Categoria, {
+            as:"categorias",
+            foreignKey: "idcategoria"
+        });
+
+
+    }
+
+    Productos.associate = function(models){
+        Productos.belongsTo(models.Tallas, {
+            as:"tallas",
+            foreignKey: "idtalla"
+        });
+
+
+    }
     return Producto;
 }
+
