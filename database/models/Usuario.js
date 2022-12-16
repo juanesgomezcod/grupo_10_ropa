@@ -1,4 +1,4 @@
-const { DataTypes } = require("sequelize/types");
+
 
 module.exports = (sequelize, DataTypes) => {
     let alias = "Usuarios";
@@ -15,16 +15,16 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.TEXT
         },
         email:{
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
         },
         contraseña:{
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
         },
         admin:{
             type: DataTypes.TINYINT
         },
         avatar:{
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
         }
     };
     let config = {

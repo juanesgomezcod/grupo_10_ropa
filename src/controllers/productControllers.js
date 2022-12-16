@@ -7,7 +7,7 @@ const controller = {
    //listado
 	store: (req, res) => {
 		db.Productos.findAll()
-		.then(function(productos){
+		.then(function(products){
 			res.render("store", {products})
 		})
 	},
@@ -18,7 +18,7 @@ const controller = {
         db.Productos.findByPk(req.params.id, {
 			include: [{association: "categorias"}, {association: "tallas"}]
 		})
-			.then(function(pelicula){
+			.then(function(products){
 				res.render("productDetail",{products})
 			})
         },

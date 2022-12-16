@@ -1,4 +1,4 @@
-const { DataTypes } = require("sequelize/types");
+
 
 module.exports = (sequelize, DataTypes) => {
     let alias = "Tallas";
@@ -17,14 +17,14 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
     
-    const Talla = sequelize.define(alias, cols, config);
+    const Tallas = sequelize.define(alias, cols, config);
 
-    Categorias.associate = function(models){
+    Tallas.associate = function(models){
         Tallas.hasMany(models.Productos, {
             as:"productos",
             foreignKey: "idtalla"
         })
     }
 
-    return Talla;
+    return Tallas;
 }

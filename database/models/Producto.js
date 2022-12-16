@@ -1,4 +1,4 @@
-const { DataTypes } = require("sequelize/types");
+
 
 module.exports = (sequelize, DataTypes) => {
     let alias = "Productos";
@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
 
-    const Producto = sequelize.define(alias, cols, config);
+    const Productos = sequelize.define(alias, cols, config);
 
     Productos.associate = function(models){
         Productos.belongsTo(models.Categoria, {
@@ -48,6 +48,6 @@ module.exports = (sequelize, DataTypes) => {
 
 
     }
-    return Producto;
+    return Productos;
 }
 
