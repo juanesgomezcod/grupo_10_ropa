@@ -18,8 +18,8 @@ const productRoutes = require('./src/routes/productRoutes');
 
 
 app.use('/', mainRoutes);
-app.use('/users', userRoutes);
-app.use('/products', productRoutes);
+app.use('/', userRoutes);
+app.use('/', productRoutes);
 
 
 

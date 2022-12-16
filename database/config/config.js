@@ -1,8 +1,8 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "swipdb",
+    "password": "",
+    "database": "swip_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

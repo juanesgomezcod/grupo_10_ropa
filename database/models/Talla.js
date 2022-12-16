@@ -1,7 +1,7 @@
 
 
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Tallas";
+    let alias = "Size";
     let cols = {
         id:{
             type: DataTypes.INTEGER,
@@ -17,14 +17,14 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
     
-    const Tallas = sequelize.define(alias, cols, config);
+    const Size = sequelize.define(alias, cols, config);
 
-    Tallas.associate = function(models){
-        Tallas.hasMany(models.Productos, {
-            as:"productos",
-            foreignKey: "idtalla"
+    Size.associate = function(models){
+        Size.hasMany(models.Product, {
+            as:"products",
+            foreignKey: "id_talla"
         })
     }
 
-    return Tallas;
+    return Size;
 }

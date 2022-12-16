@@ -6,20 +6,20 @@ let db = require("../../database/models")
 const controller = {
    //listado
 	store: (req, res) => {
-		db.Productos.findAll()
-		.then(function(products){
-			res.render("store", {products})
+		db.Product.findAll()
+		.then(function(Product){
+			res.render("store", {Product})
 		})
 	},
 
 
     // Detalle de un producto
     productDetail: (req, res) => {
-        db.Productos.findByPk(req.params.id, {
-			include: [{association: "categorias"}, {association: "tallas"}]
+        db.Product.findByPk(req.params.id, {
+			include: [{association: "Category"}, {association: "Size"}]
 		})
-			.then(function(products){
-				res.render("productDetail",{products})
+			.then(function(Product){
+				res.render("productDetail",{Product})
 			})
         },
      
@@ -32,9 +32,9 @@ const controller = {
 
     // Crear Nuevo producto en el formulario
     create : (req, res) => {
-		db.Categorias.findAll()
-		.then(function(categorias){
-			return res.render("newProduct",{categorias});
+		db.Categor.findAll()
+		.then(function(Category){
+			return res.render("newProduct",{Category});
 		})
         //aca tambien hay que llamar las tallas
 
@@ -42,7 +42,7 @@ const controller = {
 
     // nuevo producto para guardar
     adicional : (req, res) => {
-		db.products.create({
+		db.Productos.create({
 			nombre: req.body.nombreProducto,
 			descripcion: req.body.descripcion,
 			precio: req.body.precio,
@@ -55,7 +55,7 @@ const controller = {
 
     // formulario para editar
 	edit : (req, res) => {
-		let productToEdit = db.Productos.findByPk(req.params.id)
+		let productToEdit = db.Product.findByPk(req.params.id)
 			.then(function(productToEdit){
 				res.render('editProduct', {productToEdit})
 			})
@@ -64,7 +64,7 @@ const controller = {
 
     // Update - Method to update
 	update : (req, res) => {
-		db.products.update({
+		db.Product.update({
 			nombre: req.body.nombreProducto,
 			descripcion: req.body.descripcion,
 			precio: req.body.precio,
@@ -76,12 +76,12 @@ const controller = {
 			}
 		});
 		
-		res.redirect('/productDetail/' + req.params.id);
+		res.redirect('/productDetail' + req.params.id);
 	},
 
     // Borrar un producto de la base de datos
 	destroy : (req, res) => {
-		db.products.destroy({
+		db.Product.destroy({
 			where: {
 				id : req.params.id
 			}
