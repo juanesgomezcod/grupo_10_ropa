@@ -56,11 +56,11 @@ const controller = {
 
     // formulario para editar
 	edit : (req, res) => {
+		
 		let productToEdit = db.Product.findByPk(req.params.id)
 			.then(function(productToEdit){
 				res.render('editProduct', {productToEdit})
 			})
-		
 	},
 
     // Update - Method to update

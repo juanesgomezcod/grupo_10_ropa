@@ -1,5 +1,4 @@
-
-            <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,78 +12,81 @@
 <%- include ("./partials/headerMain")%>
 
     <body>
-        <form action="/edit/<%= Product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+        <form action="/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
 
-            <div class="formulario">
-                <h3 class="title">Edicion de Productos</h3>
-                <div class="inputs-1">
-                    <label for="nombreProducto">Nombre </label>
-                    <input type="text" name="nombreProducto" id="nombreProducto" value="<%= Product.nombre %> " placeholder="Nombre del producto"
-                        required>
-                </div>
-                <div class="inputs-2">
-                    <label for="descripcion">Descripción </label>
-                    <input type="text" name="descripcion" id="descripcion" value="<%= Product.descripcion %> " placeholder="Descripción" required>
-                </div>
-                <div class="inputs-3">
-                    <label for="categoria">Categoria:</label>
-                    <select name="category" id="category" class="form-input">
-                        <option value="">Hoodies</option>
-                        <option value="">Jeans</option>
-                        <option value="" >Remeras</option>
-                        <option value="" >Camperas</option>
-                        <option value="" >Tote Bag</option>
-                    </select>
-                </div>
-                <div class="inputs-4">
-                    <h4 class="title">Elije la foto del producto</h4>
-                    <input type="file" name="imagen" class="productos" id="fotoProducto">
-                </div>
-
-                <div class="inputs-5">
-                    <h4>Tallas</h4>
-                    <div class="tamaños">
-                        <div>
-                            <label for="XS">
-                                <input type="radio" name="XS" value="XS" class="tallas" id="XS">
-                                XS</label>
-                        </div>
-                        <div>
-                            <label for="S">
-                                <input type="radio" name="S" value="S" class="tallas" id="S">
-                                S</label>
-                        </div>
-                        <div>
-                            <label for="M">
-                                <input type="radio" name="M" value="M" class="tallas" id="M">
-                                M</label>
-                        </div>
-                        <div>
-                            <label for="L">
-                                <input type="radio" name="L" value="L" class="tallas" id="L">
-                                L</label>
-                        </div>
-                        <div>
-                            <label for="XL">
-                                <input type="radio" name="XL" value="XL" class="tallas" id="XL">
-                                XL</label>
-                        </div>
-                        <div class="inputs-6">
-                            <label for="precio">Precio</label>
-                            <input type="number" name="precio" id="precio" value="<%= Product.precio %> "placeholder="precio $" required>
-                        </div>
-
+                <div class="formulario">
+                    <h3 class="title">Edicion de Productos</h3>
+                    <div class="inputs-1">
+                        <label for="nombreProducto">Nombre </label>
+                        <input type="text" name="nombreProducto" id="nombreProducto" value="<%= productToEdit.nombre %> "
+                            placeholder="Nombre del producto" required>
                     </div>
-                </div>
-                <br>
-                <br>
+                    <div class="inputs-2">
+                        <label for="descripcion">Descripción </label>
+                        <input type="text" name="descripcion" id="descripcion" value="<%= productToEdit.descripcion %> "
+                            placeholder="Descripción" required>
+                    </div>
+                    <div class="inputs-3">
+                        <label for="categoria">Categoria:</label>
+                        <select name="category" id="category" class="form-input">
+                            <option value="">Hoodies</option>
+                            <option value="">Jeans</option>
+                            <option value="">Remeras</option>
+                            <option value="">Camperas</option>
+                            <option value="">Tote Bag</option>
+                        </select>
+                    </div>
+                    <div class="inputs-4">
+                        <h4 class="title">Elije la foto del producto</h4>
+                        <input type="file" name="imagen" class="productos" id="fotoProducto">
+                    </div>
 
-                <button type="submit">Editar Producto</button>
-                <button type="reset">Borrar</button>
-                <br>
-                <br>
-            </div>
+                    <div class="inputs-5">
+                        <h4>Tallas</h4>
+                        <div class="tamaños">
+                            <div>
+                                <label for="XS">
+                                    <input type="radio" name="XS" value="XS" class="tallas" id="XS">
+                                    XS</label>
+                            </div>
+                            <div>
+                                <label for="S">
+                                    <input type="radio" name="S" value="S" class="tallas" id="S">
+                                    S</label>
+                            </div>
+                            <div>
+                                <label for="M">
+                                    <input type="radio" name="M" value="M" class="tallas" id="M">
+                                    M</label>
+                            </div>
+                            <div>
+                                <label for="L">
+                                    <input type="radio" name="L" value="L" class="tallas" id="L">
+                                    L</label>
+                            </div>
+                            <div>
+                                <label for="XL">
+                                    <input type="radio" name="XL" value="XL" class="tallas" id="XL">
+                                    XL</label>
+                            </div>
+                            <div class="inputs-6">
+                                <label for="precio">Precio</label>
+                                <input type="number" name="precio" id="precio" value="<%= productToEdit.precio %> "
+                                    placeholder="precio $" required>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+
+                    <button type="submit">Editar Producto</button>
+                    <button type="reset">Borrar</button>
+                    <br>
+                    <br>
+                </div>
         </form>
     </body>
     <%- include ("./partials/footer")%>
+
 </html>
