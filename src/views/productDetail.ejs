@@ -11,22 +11,24 @@
     <link href="https://use.fontawesome.com/releases/v5.0.4/js/v4-shims.js" rel="stylesheet"></script> 
     <link href="https://use.fontawesome.com/releases/v5.0.4/js/fontawesome.js" rel="stylesheet"> </script>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    
 </head>
 <body>
     <%- include("./partials/headerMain") %>
     <main>
     <%- include("./partials/headerNavBar") %>
     <div class="product-container">
-        <h3>Nombre : <%= productos.nombre %> </h3>
-        <h4>Talla : <%= productos.talla.talla %> </h4>
-        <img src= "/images/store/<%= product.image %>">
-        <p> $<%= (productos.precio) %></p>
-        <p><%= (productos.descripcion) %></p>
+        <h3>Nombre : <%= Product.nombre %> </h3>
+        <h4>Talla : <%= Product.talla %> </h4>
+        <img src= "/images/store/<%= Product.image %>">
+        <p> $<%= (Product.precio) %></p>
+        <p><%= (Product.descripcion) %></p>
         <button class="button-buy">Comprar</button>
-        <a href="/edit/<%= productos.id %> ">
+        <a href="/edit/<%= Product.id %> ">
         <button class="button-buy">editar</button>
         </a>
-        <form action="/delete/<%= productos.id %> " method="POST">
+        <form action="/delete/<%= Product.id %> " method="POST">
             <button type="submit" class="button-buy">borrar</button>
             </form>
     </div> 

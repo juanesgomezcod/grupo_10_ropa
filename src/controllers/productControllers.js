@@ -15,9 +15,10 @@ const controller = {
 
     // Detalle de un producto
     productDetail: (req, res) => {
-        db.Product.findByPk(req.params.id, {
-			include: [{association: "Category"}, {association: "Size"}]
-		})
+        db.Product.findByPk(req.params.id)
+		// 	, {
+		// 	include: [{association: "id_categoria"}, {association: "Size"}]
+		// })
 			.then(function(Product){
 				res.render("productDetail",{Product})
 			})
