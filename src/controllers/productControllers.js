@@ -33,7 +33,7 @@ const controller = {
 
     // Crear Nuevo producto en el formulario
     create : (req, res) => {
-		db.Categor.findAll()
+		db.Category.findAll()
 		.then(function(Category){
 			return res.render("newProduct",{Category});
 		})

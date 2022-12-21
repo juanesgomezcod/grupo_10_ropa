@@ -27,9 +27,9 @@
                 <div class="inputs-3">
                     <label for="categoria">Categoria:</label>
                     <select name="Categorias" id="category" class="form-input">
-                        <% for (let i=0; i < Categorias.length; i++) { %> 
-                            <option value="<%=Categorias[i].id%>">
-                                <%= Categorias[i].nombre %> 
+                        <% for (let i=0; i < Category.length; i++) { %> 
+                            <option value="<%=Category[i].id%>">
+                                <%= Category[i].nombre %> 
                             </option>
                         <% } %> 
                     </select>
@@ -42,11 +42,11 @@
                 <div class="inputs-5">
                     <h4>Tallas</h4>
                     <div class="tamaños">
-                        <% for (let i=0; i < tallas.length; i++) { %> 
+                        <% for (let i=0; i < Size.length; i++) { %> 
                         <div>
                             <label for=<%= Tallas[i].talla %>>
-                                <input type="radio" name=talla value=<%= Tallas[i].talla %> class="tallas" id=<%= Tallas[i].talla %>>
-                                <%= Tallas[i].talla %></label>
+                                <input type="radio" name=talla value=<%= Size[i].talla %> class="tallas" id=<%= Size[i].talla %>>
+                                <%= Size[i].talla %></label>
                         </div>
                         <% } %>
                         
