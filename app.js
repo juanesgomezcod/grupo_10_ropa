@@ -17,7 +17,8 @@ app.use(session({
     saveUninitialized: false
 }));
 
-//app.use(userLoggedMiddleware);
+//Use del Middleware Login y cookies
+app.use(userLoggedMiddleware);
 app.use(cookies());
 
 app.use(express.static(path.join(__dirname, "/public")));
@@ -27,18 +28,21 @@ app.use(methodOverride('_method'));
 app.set('views',(path.join(__dirname ,"./src/views"))); 
 app.set('view engine', 'ejs');
 
+//Requerimos las rutas
+
 const mainRoutes = require('./src/routes/mainRoutes');
 const userRoutes = require('./src/routes/userRoutes');
 const productRoutes = require('./src/routes/productRoutes');
 
 
+//Use de las rutas
+
 app.use('/', mainRoutes);
-app.use('/user', userRoutes);
+app.use('/', userRoutes);
 app.use('/', productRoutes);
 
 
-
-
+//Servidor corriendo
 
 app.listen(3000,() => console.log("Servidor corriendo"))
 
