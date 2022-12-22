@@ -6,6 +6,8 @@ const multer = require("multer")
 
 const controller = require('../controllers/userControllers');
 const validationCreate = require('../middlewares/validation'); 
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 //configuración del multer
 const storage = multer.diskStorage({
@@ -25,13 +27,18 @@ const uploadFile = multer({storage});
 //
 
 
-router.get('/login', controller.login); 
-router.get('/register', controller.register); 
+router.get('/login',guestMiddleware, controller.login); 
+router.get('/register',guestMiddleware, controller.register); 
 
-//prcocesar el registro de un usuario 
+//procesar el registro de un usuario 
 router.post('/register', uploadFile.single("avatar"), validationCreate, controller.processRegister);
 //procesar el Login 
-router.post('/login', controller.loginProcess)
+router.post('/login', controller.loginProcess);
 
+//perfil del usuario
+router.get('/profile/',authMiddleware, controller.profile);
+
+//logout
+router.get('/logout/', controller.logout);
 
 module.exports = router;   

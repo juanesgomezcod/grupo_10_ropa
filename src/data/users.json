@@ -4,7 +4,7 @@
   "nombre": "dsfsdf",
   "apellidos": "sfsdfs",
   "email": "julieth.olarte01@uptc.edu.co",
-  "contraseÃ±a": "123456",
+  "password": "123456",
   "passwordconfirm": "123456"
  },
  {
@@ -12,7 +12,7 @@
   "nombre": "rgrege",
   "apellidos": "rterte",
   "email": "julieth.olarte01@uptc.edu.co",
-  "contraseÃ±a": "Hola123",
+  "password": "Hola123",
   "passwordconfirm": "Hola123"
  },
  {
@@ -20,7 +20,7 @@
   "nombre": "dsfsdf",
   "apellidos": "sfsdfs",
   "email": "jolarte@hotmail.com.co",
-  "contraseÃ±a": "prueba1",
+  "password": "prueba1",
   "passwordconfirm": "prueba1"
  },
  {
@@ -28,7 +28,7 @@
   "nombre": "fghfg",
   "apellidos": "sdfsdfs",
   "email": "julietholarte16@gmail.com",
-  "contraseÃ±a": "dfsdfsf",
+  "password": "dfsdfsf",
   "passwordconfirm": "sdfsdfs"
  },
  {
@@ -36,7 +36,7 @@
   "nombre": "fghfg",
   "apellidos": "sdfsdfs",
   "email": "julietholarte16@gmail.com",
-  "contraseÃ±a": "dfsdfsf",
+  "password": "dfsdfsf",
   "passwordconfirm": "sdfsdfs"
  }
 ]

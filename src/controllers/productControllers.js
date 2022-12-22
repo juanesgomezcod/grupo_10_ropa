@@ -37,18 +37,20 @@ const controller = {
 		.then(function(Category){
 			return res.render("newProduct",{Category});
 		})
-        //aca tambien hay que llamar las tallas
+        .then(function(Size){
+			return res.render("newProduct",{Size});
+		})
 
     },
 
     // nuevo producto para guardar
     adicional : (req, res) => {
 		db.Productos.create({
-			nombre: req.body.nombreProducto,
+			nombre: req.body.nombre,
 			descripcion: req.body.descripcion,
 			precio: req.body.precio,
 			talla: req.body.talla,
-			categoria: req.body.Categorias
+			categoria: req.body.Category
 		})
 		res.redirect("/store")
 		
@@ -66,18 +68,18 @@ const controller = {
     // Update - Method to update
 	update : (req, res) => {
 		db.Product.update({
-			nombre: req.body.nombreProducto,
+			nombre: req.body.nombre,
 			descripcion: req.body.descripcion,
 			precio: req.body.precio,
 			talla: req.body.talla,
-			categoria: req.body.Categorias
+			categoria: req.body.Category
 		},{
 			where:{
 				id : req.params.id
 			}
 		});
 		
-		res.redirect('/productDetail' + req.params.id);
+		res.redirect('/productDetail/' + req.params.id);
 	},
 
     // Borrar un producto de la base de datos

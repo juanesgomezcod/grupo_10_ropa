@@ -14,22 +14,25 @@
   <%- include ("./partials/headerMain")%>
     <main>
       <div class = formCompleto>
-        <div>
-          <!-- <h3>Bienvenid@ a SWIP</h3> -->
-          <!-- <img src="images/fondos/BASWIP.png" class="loginImage"> -->
-          <!-- <h4>¿No tíenes una cuenta?</h4> -->
-        </div>
-        <form action="/login" method="POST">
+        <form action="/user/login" method="POST">
           <div class="register-container">
 
             <h1 class="title">Ingresar</h1>
             <div class="inputs">
               <label for="mail">Correo electrónico</label>
               <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
+              <% if (locals.errors && errors.email) { %>
+                <div class="texto-error">
+                    <%= errors.email.msg %>
+                  </div>
+                  <% } %>
             </div>
             <div class="inputs">
               <label for="password">Contraseña</label>
               <input type="password" name="password" id="password" placeholder="Contraseña" required>
+            </div>
+            <div>
+              <label for=""><input type="checkbox" name="remember-user"> Recordar mi cuenta</label>
             </div>
             <div class="account-buttons">
               <button type="submit" class="account sub">Iniciar sesión</button>

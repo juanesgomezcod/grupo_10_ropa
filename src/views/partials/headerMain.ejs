@@ -19,12 +19,15 @@
                 <input type="search" id="search" placeholder="Buscar productos..." />
             </form>
         </div>
+        <% if(locals.isLogged){ %>
 
+            <% } %> else <% { %> 
         <div class="login-carrito">
-            <a href="/login"><i class="far fa-user"></i></a>
-            <p class="texto"><a href="/login"> Iniciar sesión</a></p>
+            <a href="/user/login"><i class="far fa-user"></i></a>
+            <p class="texto"><a href="/user/login"> Iniciar sesión</a></p>
             <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
             <p class="texto"><a href="/productCart"> Carrito de compras </a></p>
+            <% } %>
         </div>
     </div>
 </header>

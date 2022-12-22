@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<%- include("./partials/headerMain") %>
+    <%- include ("./partials/headerNavBar")%>
+
+        <body>
+
+            <div>
+                <div>
+                    <div>
+                        <h2>Hola <%= user.nombre%> </h2>
+                        <img src="/public/images/avatars/<% user.avatar %> >">
+                        <br>
+                        <br>
+                        <div>
+                            <%= user.email %> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </body>
+        <%- include ("./partials/footer")%>
+
+</html>
