@@ -1,11 +1,11 @@
-const User = require('../controllers/userControllers')
+const user = require("../controllers/userControllers")
 
-function userLoggedMiddleware(req,res,next){
+function userLoggedMiddleware (req,res,next){
      
     res.locals.isLogged = false;
 
     let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = User.findField('email', emailInCookie);
+    let userFromCookie = user.findField('email', emailInCookie);
 
     if(userFromCookie){
         req.session.userLogged = userFromCookie
@@ -20,3 +20,4 @@ function userLoggedMiddleware(req,res,next){
 }
 
 module.exports = userLoggedMiddleware;
+

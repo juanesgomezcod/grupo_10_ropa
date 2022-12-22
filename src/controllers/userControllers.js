@@ -128,7 +128,7 @@ const controller = {
         let usuarioLogin = controller.findField("email", req.body.email);
 
         if(usuarioLogin){
-            let isOkThePassword = bcryptjs.compareSync(rec.body.password, usuarioLogin.password)
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, usuarioLogin.password)
             if(isOkThePassword){
                 delete usuarioLogin.password;
                 req.session.userLogged = usuarioLogin

@@ -27,8 +27,8 @@ const uploadFile = multer({storage});
 //
 
 
-router.get('/login',guestMiddleware, controller.login); 
-router.get('/register',guestMiddleware, controller.register); 
+router.get('/login', guestMiddleware, controller.login); 
+router.get('/register', guestMiddleware, controller.register); 
 
 //procesar el registro de un usuario 
 router.post('/register', uploadFile.single("avatar"), validationCreate, controller.processRegister);
