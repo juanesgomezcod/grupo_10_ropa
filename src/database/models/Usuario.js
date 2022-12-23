@@ -1,5 +1,3 @@
-
-
 module.exports = (sequelize, DataTypes) => {
     let alias = "User";
     let cols = {
@@ -17,16 +15,17 @@ module.exports = (sequelize, DataTypes) => {
         email:{
             type: DataTypes.STRING
         },
-        contraseña:{
+        clave:{
             type: DataTypes.STRING
         },
-        admin:{
+        administrador:{
             type: DataTypes.TINYINT
         },
         avatar:{
             type: DataTypes.STRING
         }
     };
+
     let config = {
         tableName: "users",
         timestamps: false

@@ -37,7 +37,7 @@ CREATE TABLE users (
    nombres TEXT NOT NULL,
    apellidos TEXT NOT NULL,
    email VARCHAR(255) NOT NULL,
-   contraseña VARCHAR(255) NOT NULL,
+   clave VARCHAR(255) NOT NULL,
    administrador  TINYINT NOT NULL DEFAULT 0,
    avatar  VARCHAR(255) NOT NULL,
    PRIMARY KEY (id)
@@ -96,19 +96,19 @@ insert into products  (id, nombre, descripcion, precio, id_talla, id_categoria) 
 
 -- usuarios
 
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (1, 'Clayson', 'Nutton', 'cnutton0@elpais.com', 'Z3nLHNVV', 0, 'https://robohash.org/debitisaperiamconsequatur.png?size=50x50&set=set1');
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (2, 'Evaleen', 'Ackery', 'eackery1@123-reg.co.uk', 'QoceQ2m1', 1, 'https://robohash.org/nostrumquiqui.png?size=50x50&set=set1');
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (3, 'Aguistin', 'Fielden', 'afielden2@exblog.jp', 'vRYJSg65xJ', 0, 'https://robohash.org/quianamdicta.png?size=50x50&set=set1');
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (4, 'Neall', 'Helliwell', 'nhelliwell3@harvard.edu', 'EqhtqlsOBP', 0, 'https://robohash.org/siteaquea.png?size=50x50&set=set1');
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (5, 'Kaylil', 'Sheals', 'ksheals4@ftc.gov', 'T5afrtxFC', 0, 'https://robohash.org/suntenimqui.png?size=50x50&set=set1');
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (6, 'Ely', 'Dannohl', 'edannohl5@weather.com', '33RSeNv', 0, 'https://robohash.org/natusipsamaiores.png?size=50x50&set=set1');
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (7, 'Raynell', 'Kinkade', 'rkinkade6@marketwatch.com', 'gWts2dH', 0, 'https://robohash.org/perferendisdelectusporro.png?size=50x50&set=set1');
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (8, 'Lyn', 'Haslen', 'lhaslen7@purevolume.com', 'KgxbOUT8oEz', 0, 'https://robohash.org/utvoluptasmaxime.png?size=50x50&set=set1');
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (9, 'Josy', 'Mussington', 'jmussington8@google.fr', 'APHhGko', 1, 'https://robohash.org/laudantiumnihilquod.png?size=50x50&set=set1');
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (10, 'Prudence', 'Klemencic', 'pklemencic9@t.co', 'RhZBPDSVP', 1, 'https://robohash.org/sedaliasest.png?size=50x50&set=set1');
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (11, 'Sansone', 'Iskowicz', 'siskowicza@goo.gl', 'dgg5O6ysa7v', 1, 'https://robohash.org/laborumsaepesit.png?size=50x50&set=set1');
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (12, 'Shara', 'Lothlorien', 'slothlorienb@sfgate.com', '9q3zjX6c', 1, 'https://robohash.org/omnisexpeditaexplicabo.png?size=50x50&set=set1');
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (13, 'Creight', 'Ganders', 'cgandersc@clickbank.net', 'ecBOQwJyI', 1, 'https://robohash.org/quosadipiscinam.png?size=50x50&set=set1');
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (14, 'Odella', 'Stockell', 'ostockelld@nih.gov', 'gtiz259Fu', 0, 'https://robohash.org/quiaeosreprehenderit.png?size=50x50&set=set1');
-insert into users(id, nombres, apellidos, email, contraseña, administrador, avatar) values (15, 'Shea', 'Barnby', 'sbarnbye@abc.net.au', 'QIhzLy3i9t', 1, 'https://robohash.org/porroeligendiut.png?size=50x50&set=set1');
-insert into users (id, nombres, apellidos, email, contraseña, administrador, avatar) values (16, 'Leann', 'Hammerman', 'lhammermanf@nifty.com', '10VLd3K', 0, 'https://robohash.org/perferendisminimaet.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (1, 'Clayson', 'Nutton', 'cnutton0@elpais.com', 'Z3nLHNVV', 0, 'https://robohash.org/debitisaperiamconsequatur.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (2, 'Evaleen', 'Ackery', 'eackery1@123-reg.co.uk', 'QoceQ2m1', 1, 'https://robohash.org/nostrumquiqui.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (3, 'Aguistin', 'Fielden', 'afielden2@exblog.jp', 'vRYJSg65xJ', 0, 'https://robohash.org/quianamdicta.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (4, 'Neall', 'Helliwell', 'nhelliwell3@harvard.edu', 'EqhtqlsOBP', 0, 'https://robohash.org/siteaquea.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (5, 'Kaylil', 'Sheals', 'ksheals4@ftc.gov', 'T5afrtxFC', 0, 'https://robohash.org/suntenimqui.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (6, 'Ely', 'Dannohl', 'edannohl5@weather.com', '33RSeNv', 0, 'https://robohash.org/natusipsamaiores.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (7, 'Raynell', 'Kinkade', 'rkinkade6@marketwatch.com', 'gWts2dH', 0, 'https://robohash.org/perferendisdelectusporro.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (8, 'Lyn', 'Haslen', 'lhaslen7@purevolume.com', 'KgxbOUT8oEz', 0, 'https://robohash.org/utvoluptasmaxime.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (9, 'Josy', 'Mussington', 'jmussington8@google.fr', 'APHhGko', 1, 'https://robohash.org/laudantiumnihilquod.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (10, 'Prudence', 'Klemencic', 'pklemencic9@t.co', 'RhZBPDSVP', 1, 'https://robohash.org/sedaliasest.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (11, 'Sansone', 'Iskowicz', 'siskowicza@goo.gl', 'dgg5O6ysa7v', 1, 'https://robohash.org/laborumsaepesit.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (12, 'Shara', 'Lothlorien', 'slothlorienb@sfgate.com', '9q3zjX6c', 1, 'https://robohash.org/omnisexpeditaexplicabo.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (13, 'Creight', 'Ganders', 'cgandersc@clickbank.net', 'ecBOQwJyI', 1, 'https://robohash.org/quosadipiscinam.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (14, 'Odella', 'Stockell', 'ostockelld@nih.gov', 'gtiz259Fu', 0, 'https://robohash.org/quiaeosreprehenderit.png?size=50x50&set=set1');
+insert into users(id, nombres, apellidos, email, clave, administrador, avatar) values (15, 'Shea', 'Barnby', 'sbarnbye@abc.net.au', 'QIhzLy3i9t', 1, 'https://robohash.org/porroeligendiut.png?size=50x50&set=set1');
+insert into users (id, nombres, apellidos, email, clave, administrador, avatar) values (16, 'Leann', 'Hammerman', 'lhammermanf@nifty.com', '10VLd3K', 0, 'https://robohash.org/perferendisminimaet.png?size=50x50&set=set1');

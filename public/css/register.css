@@ -73,14 +73,14 @@
     margin: 5px;
 }
 
-.passwordlogin {
+.clavelogin {
     display: flex;
     justify-content: center;
     margin: 5px;
 
 }
 
-.passwordconfirm {
+.claveconfirm {
     display: flex;
     justify-content: center;
     margin: 5px;
