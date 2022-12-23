@@ -18,9 +18,9 @@ app.use(session({
 }));
 
 //Use del Middleware Login y cookies
-app.use(userLoggedMiddleware);
-app.use(cookies());
 
+app.use(cookies());
+app.use(userLoggedMiddleware);
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
