@@ -4,8 +4,11 @@ const router = express.Router();
 const path = require("path")
 const multer = require("multer")
 
+//requerimos los middlewares
+
 const controller = require('../controllers/userControllers');
 const validationCreate = require('../middlewares/validation'); 
+const validationLogged = require('../middlewares/validationLogged');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
@@ -26,14 +29,14 @@ const uploadFile = multer({storage});
 
 //
 
-
 router.get('/login', guestMiddleware, controller.login); 
 router.get('/register', guestMiddleware, controller.register); 
 
 //procesar el registro de un usuario 
 router.post('/register', uploadFile.single("avatar"), validationCreate, controller.processRegister);
+
 //procesar el Login 
-router.post('/login', controller.loginProcess);
+router.post('/login', validationLogged, controller.loginProcess)
 
 //perfil del usuario
 router.get('/profile/',authMiddleware, controller.profile);

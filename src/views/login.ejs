@@ -30,7 +30,12 @@
             </div>
             <div class="inputs">
               <label for="clave">Contraseña</label>
-              <input type="clave" name="clave" id="clave" placeholder="Contraseña" required>
+              <input type="password" name="clave" id="clave" placeholder="Contraseña" required>
+              <% if (locals.errors && errors.clave) { %>
+                <div class="texto-error">
+                  <%= errors.clave.msg %>
+                </div>
+                <% } %>
             </div>
             <div>
               <label for=""><input type="checkbox" name="remember-user"> Recordar mi cuenta</label>

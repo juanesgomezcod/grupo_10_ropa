@@ -146,7 +146,7 @@ const controller = {
         }
     },
 
-    //crear un Usuario
+    //crear un Usuario y eliminarlo
 
     create: function (userData) {
         let allUsers = this.findAll();
@@ -168,30 +168,96 @@ const controller = {
 
 
     //login
+    //Login process, autenticación con express, validación de los campos
 
     loginProcess: (req, res) => {
-        let usuarioLogin = controller.findField("email", req.body.email);
 
-        if (usuarioLogin) {
-            let isOkTheclave = bcryptjs.compareSync(rec.body.clave, usuarioLogin.clave)
-            if (isOkTheclave) {
-                delete usuarioLogin.clave;
-                req.session.userLogged = usuarioLogin
+		const resultadosValidar = validationResult(req);
+		if (!resultadosValidar.isEmpty()) {
+			return res.render('login', {
+				errors: resultadosValidar.mapped(),
+				oldData: req.body,
+			});
+		}
+		db.User.findOne({
+				where: {
+					email: req.body.email
+				}
+			})
+			.then((usuarioLogin) => {
+				if (usuarioLogin) {
+					let claveOk = bcrypt.compareSync(
+						req.body.clave,
+						usuarioLogin.clave
+					);
+					if (claveOk) {
+						delete usuarioLogin.clave;
+						req.session.userLogged = usuarioLogin;
 
-                if (req.body.remember - user) {
-                    res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 })
-                }
+                        // remember - user
+                        
+                           //             if (req.body.remember - user) {
+    //                 res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 })
+    //             }
 
-                return res.redirect('/user/profile')
-            }
-            return res.render("login", {
-                errors: {
-                    email: {
-                        msg: "Las credenciales son invalidas"
-                    }
-                }
-            });
-        }
+						if (req.body.remember) {
+							res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 });
+						} 
+
+						return res.redirect('/profile');
+					}
+
+					return res.render('login', {
+						errors: {
+							email: {
+								msg: 'El email o la contraseña son inválidos',
+							},
+						},
+					});
+				}
+
+				return res.render('login', {
+					errors: {
+						email: {
+							msg: 'El email o la contraseña son inválidos',
+						},
+					},
+				});
+			})
+			.catch((error) => {
+				res.send(error);
+			});
+
+	},
+
+
+
+
+    //no sirve --
+
+    // loginPrRocess: (req, res) => {
+    //     let usuarioLogin = controller.findField("email", req.body.email);
+
+    //     if (usuarioLogin) {
+    //         let isOkTheclave = bcryptjs.compareSync(rec.body.clave, usuarioLogin.clave)
+    //         if (isOkTheclave) {
+    //             delete usuarioLogin.clave;
+    //             req.session.userLogged = usuarioLogin
+
+    //             if (req.body.remember - user) {
+    //                 res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 })
+    //             }
+
+    //             return res.redirect('/user/profile')
+    //         }
+    //         return res.render("login", {
+    //             errors: {
+    //                 email: {
+    //                     msg: "Las credenciales son invalidas"
+    //                 }
+    //             }
+    //         });
+    //     }
         // return res.render("login",{
         //     errors:{
         //         email:{
@@ -199,7 +265,7 @@ const controller = {
         //         }
         //     }
         // });
-    }
+    
 };
 
 
