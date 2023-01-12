@@ -43,12 +43,12 @@
                     <h4>Tallas</h4>
                     <div class="tamaños">
                         <% for (let i=0; i < Size.length; i++) { %> 
-                        <div>
-                            <label for=<%= Size[i].talla %>>
-                                <input type="radio" name=talla value=<%= Size[i].talla %> class="tallas" id=<%= Size[i].talla %>>
-                                <%= Size[i].talla %></label>
-                        </div>
-                        <% } %>
+                            <div>
+                                <label for=<%= Size[i].talla %>>
+                                    <input type="radio" name=size value=<%= Size[i].talla %> class="tallas" id=<%= Size[i].talla %>>
+                                    <%= Size[i].talla %></label>
+                            </div>
+                            <% } %>
                         
                         <div class="inputs-6">
                             <label for="precio">Precio</label>

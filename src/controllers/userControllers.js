@@ -93,7 +93,7 @@ const controller = {
                     } else {
                         db.User.create({
                             nombre: req.body.nombre,
-                            apellido : req.body.apellido,
+                            apellidos : req.body.apellidos,
                             email: req.body.email,
                             clave: bcrypt.hashSync(req.body.clave, 10),
                             administrador: '0',
@@ -114,57 +114,57 @@ const controller = {
         }
     },
 
-    //Guardar Usuario
+    // Guardar Usuario
 
-    getData: function () {
-        return usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-    },
+    // getData: function () {
+    //     return usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+    // },
 
-    findAll: function () {
-        return this.getData();
-    },
+    // findAll: function () {
+    //     return this.getData();
+    // },
 
-    findByPk: function (id) {
-        let allUsers = this.findAll();
-        let userFound = allUsers.find(oneUser => oneUser.id === id);
-        return userFound;
-    },
+    // findByPk: function (id) {
+    //     let allUsers = this.findAll();
+    //     let userFound = allUsers.find(oneUser => oneUser.id === id);
+    //     return userFound;
+    // },
 
-    findField: function (field, text) {
-        let allUsers = this.findAll();
-        let userFound = allUsers.find(oneUser => oneUser[field] === text);
-        return userFound;
-    },
+    // findField: function (field, text) {
+    //     let allUsers = this.findAll();
+    //     let userFound = allUsers.find(oneUser => oneUser[field] === text);
+    //     return userFound;
+    // },
 
-    generateId: function () {
-        let allUsers = this.findAll();
-        let lastUser = allUsers.pop();
-        if (lastUser) {
-            return lastUser.id + 1;
-        } else {
-            return 1;
-        }
-    },
+    // generateId: function () {
+    //     let allUsers = this.findAll();
+    //     let lastUser = allUsers.pop();
+    //     if (lastUser) {
+    //         return lastUser.id + 1;
+    //     } else {
+    //         return 1;
+    //     }
+    // },
 
     //crear un Usuario y eliminarlo
 
-    create: function (userData) {
-        let allUsers = this.findAll();
-        let newUser = {
-            id: this.generateId(),
-            ...userData
-        }
-        allUsers.push(newUser);
-        fs.writeFileSync(usersFilePath, JSON.stringify(allUsers, null, ' '));
-        return newUser;
-    },
+    // create: function (userData) {
+    //     let allUsers = this.findAll();
+    //     let newUser = {
+    //         id: this.generateId(),
+    //         ...userData
+    //     }
+    //     allUsers.push(newUser);
+    //     fs.writeFileSync(usersFilePath, JSON.stringify(allUsers, null, ' '));
+    //     return newUser;
+    // },
 
-    delete: function (id) {
-        let allUsers = this.findAll();
-        let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
-        fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
-        return finalUsers;
-    },
+    // delete: function (id) {
+    //     let allUsers = this.findAll();
+    //     let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
+    //     fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
+    //     return finalUsers;
+    // },
 
 
     //login
@@ -200,7 +200,7 @@ const controller = {
     //                 res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 })
     //             }
 
-						if (req.body.remember) {
+						if (req.body.userEmail) {
 							res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 });
 						} 
 
@@ -228,6 +228,83 @@ const controller = {
 				res.send(error);
 			});
 
+	},
+
+    profile: (req, res) => {
+		return res.render('profile', {
+			user: req.session.userLogged
+		});
+	},
+
+    editProfile: (req, res) => {
+		db.User.findByPk(req.params.id)
+			.then(function (userToEdit) {
+				res.render('editProfile', {
+					userToEdit: userToEdit
+				});
+			})
+			.catch((error) => {
+				res.send(error);
+			});
+	},
+
+    UpdateProfile: (req, res) => {
+		
+		const resultValidation = validationResult(req);
+		let userToEdit = db.User.findByPk(req.params.id)
+		
+		if (resultValidation.errors.length > 0) {
+
+			return res.render('editProfile', {
+				errors: resultValidation.mapped(),
+				oldData: req.body,
+				userToEdit
+			} ,
+			req.body = null);
+		
+			
+		} else {
+			
+			db.User.findByPk(req.params.id)
+            .then((userEdit) => {
+				db.User.update({
+						nombre: req.body.nombre || userEdit.nombre,
+                        apellidos: req.body.apellidos || userEdit.apellidos,
+						email: userEdit.email,
+						clave: userEdit.clave,
+						avatar: req.file == undefined ? userEdit.avatar : req.file.filename,
+					}, {
+						where: {
+							id: req.params.id
+						},
+					})
+					.then(() => {
+						return res.redirect('/profile');
+					})
+					.catch((error) => res.send(error));
+			});
+		}
+
+	},
+
+    logout: (req, res) => {
+		res.clearCookie("userEmail");
+		req.session.destroy();
+		return res.redirect("/");
+	},
+
+	delete: function (req, res) {
+		db.User.destroy({
+				where: {
+					id: req.params.id
+				}
+			})
+			.then(() => {
+				req.session.destroy();
+				res.clearCookie("userEmail");
+				return res.redirect("/");
+			})
+			.catch((error) => res.send(error));
 	},
 
 
