@@ -1,21 +1,27 @@
-const User = require('../controllers/userControllers')
+//requerimos la base de datos 
+const db = require("../database/models")
 
-function userLoggedMiddleware(req,res,next){
+async function userLoggedMiddleware(req,res,next){
      
     res.locals.isLogged = false;
 
-    let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = User.findField('email', emailInCookie);
+   
+    if(req.cookies.userEmail){
+        let emailInCookie = req.cookies.userEmail;
+        let userFromCookie = await db.User.findOne({ where: { email: emailInCookie } });
 
-    if(userFromCookie){
-        req.session.userLogged = userFromCookie
-    }
+        if(userFromCookie){
+            req.session.userLogged = userFromCookie
+        }  
+        
+        if(req.session.userLogged){
+            res.locals.isLogged = true;
+            res.locals.userLogged = req.session.userLogged
+        }
 
-    if(req.session.userLogged){
-        res.locals.isLogged = true;
-        res.locals.userLogged = req.session.userLogged
+        next();
     }
-    
+  
     next();
 }
 
