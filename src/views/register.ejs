@@ -20,14 +20,14 @@
                             <form action="/register" method="POST" enctype="multipart/form-data">
                             <div class="registrarse">
                                 <div class="nombreregistro">
-                                    <label for="nombre">Nombre</label>
+                                    <label for="nombres">Nombre</label>
                                 </div>
                                 <div class="nombreregistro">
-                                    <input type="text" name="nombre" value ="<%= locals.old ? old.nombre: null %>">
+                                    <input type="text" name="nombres" value ="<%= locals.old ? old.nombres: null %>">
                                 </div>
-                                <% if (locals.errors && errors.nombre) { %>
+                                <% if (locals.errors && errors.nombres) { %>
                                     <div class="texto-error">
-                                        <%= errors.nombre.msg %>
+                                        <%= errors.nombres.msg %>
                                     </div>
                                     <% } %>
                                         <div class="apellidosregistro">

@@ -1,5 +1,5 @@
 //requerimientos
-const fs = require('fs');
+//const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
 
@@ -52,7 +52,7 @@ const controller = {
 
     //validacion y proceso de registro
     
-    processRegister: async (req, res) => {
+    processRegister: (req, res) => {
         try {
             const resultadosValidar = validationResult(req);
 
@@ -63,7 +63,7 @@ const controller = {
                 });
             }
 
-            await db.User.findOne({
+             db.User.findOne({
 
                 where: {
                     email: req.body.email
@@ -92,10 +92,10 @@ const controller = {
                         })
                     } else {
                         db.User.create({
-                            nombre: req.body.nombre,
+                            nombres: req.body.nombres,
                             apellidos : req.body.apellidos,
                             email: req.body.email,
-                            clave: bcrypt.hashSync(req.body.clave, 10),
+                            clave: bcryptjs.hashSync(req.body.clave, 10),
                             administrador: '0',
                             avatar: req.file?.filename || "default.png",
                         })
@@ -103,6 +103,7 @@ const controller = {
                                 return res.redirect("/login");
                             })
                             .catch((error) => {
+                                //crear pagina de error y borrar este console
                                 console.log(error);
                             });
                     }
@@ -170,7 +171,7 @@ const controller = {
     //login
     //Login process, autenticación con express, validación de los campos
 
-    loginProcess: (req, res) => {
+    loginProcess: async (req, res) => {
 
 		const resultadosValidar = validationResult(req);
 		if (!resultadosValidar.isEmpty()) {
@@ -179,26 +180,25 @@ const controller = {
 				oldData: req.body,
 			});
 		}
-		db.User.findOne({
+        
+		usuarioLogin = await db.User.findOne({
 				where: {
 					email: req.body.email
 				}
 			})
 			.then((usuarioLogin) => {
+                
 				if (usuarioLogin) {
-					let claveOk = bcrypt.compareSync(
+					let claveOk = bcryptjs.compareSync(
 						req.body.clave,
 						usuarioLogin.clave
 					);
+                    
 					if (claveOk) {
 						delete usuarioLogin.clave;
 						req.session.userLogged = usuarioLogin;
-
-                        // remember - user
                         
-                           //             if (req.body.remember - user) {
-    //                 res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 })
-    //             }
+
 
 						if (req.body.userEmail) {
 							res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 });
