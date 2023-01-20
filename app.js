@@ -6,6 +6,7 @@ const cookies = require("cookie-parser");
 const path = require ("path");
 const app = express();
 const methodOverride =  require('method-override'); 
+const cors = require ("cors")
 
 const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
 
@@ -28,8 +29,9 @@ app.use(methodOverride('_method'));
 
 app.set('views',(path.join(__dirname ,"./src/views"))); 
 app.set('view engine', 'ejs');
+app.use(cors());
 
-//Aquí llamo a la ruta de las api de movies
+//Aquí llamo a la ruta de las api de productos
 const apiProductsRouter = require('../grupo_10_swip/src/routes/api/products')
 //Aquí llamo a la ruta de las api de categorias
 const apiCategoriesRouter = require('../grupo_10_swip/src/routes/api/categories')
@@ -51,7 +53,7 @@ app.use('/', productRoutes);
 
 //Aquí creo la colección de mis recursos de productos (APIs)
 app.use('/api/products',apiProductsRouter);
-app.use('/api/actors',apiUsersRouter);
+app.use('/api/users',apiUsersRouter);
 app.use('/api/categories',apiCategoriesRouter);
 
 

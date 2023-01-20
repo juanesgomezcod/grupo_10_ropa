@@ -22,6 +22,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         id_categoria:{
             type: DataTypes.INTEGER
+        },
+        imagen:{
+            type: DataTypes.TEXT
         }
     };
     let config = {

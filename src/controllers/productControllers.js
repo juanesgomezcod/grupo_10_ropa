@@ -32,25 +32,22 @@ const controller = {
     
 
     // Crear Nuevo producto en el formulario
-    create : (req, res) => {
-		db.Category.findAll()
-		.then(function(Category){
-			return res.render("newProduct",{Category});
-		})
-        .then(function(Size){
-			return res.render("newProduct",{Size});
-		})
+    create : async(req, res) => {
+		const Category = await db.Category.findAll()
+		const Size = await db.Size.findAll()
+		res.render("newProduct",{Category, Size})
 
     },
 
     // nuevo producto para guardar
     adicional : (req, res) => {
-		db.Productos.create({
+		db.Product.create({
 			nombre: req.body.nombre,
 			descripcion: req.body.descripcion,
 			precio: req.body.precio,
 			talla: req.body.talla,
-			categoria: req.body.Category
+			categoria: req.body.Category,
+			imagen: req.file.filename
 		})
 		res.redirect("/store")
 		
@@ -59,9 +56,10 @@ const controller = {
     // formulario para editar
 	edit : (req, res) => {
 		
-		let productToEdit = db.Product.findByPk(req.params.id)
+		let productToEdit = db.Product.findByPk(req.params.id, {include:{all:true}})
 			.then(function(productToEdit){
 				res.render('editProduct', {productToEdit})
+				
 			})
 	},
 

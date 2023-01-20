@@ -27,7 +27,7 @@
                             placeholder="Descripción" required>
                     </div>
                     <div class="inputs-3">
-                        <label for="categoria">Categoria:</label>
+                        <label for="category">Categoria:</label>
                         <select name="category" id="category" class="form-input">
                             <option value="">Hoodies</option>
                             <option value="">Jeans</option>
@@ -44,6 +44,16 @@
                     <div class="inputs-5">
                         <h4>Tallas</h4>
                         <div class="tamaños">
+                            <div>
+                                <label for=<%=productToEdit.sizes.talla%> >
+                                    <input type="radio" name=<%=productToEdit.sizes.talla%> value=<%=productToEdit.sizes.talla%> class="tallas" id=<%=productToEdit.sizes.talla%> checked >
+                                    <%=productToEdit.sizes.talla%></label>
+                            </div>
+                            <div>
+                                <label for=<%=productToEdit.idcategoria%> >
+                                    <input type="radio" name=<%=productToEdit.categories.categoria%> value=<%=productToEdit.categories.categoria%> class="tallas" id=<%=productToEdit.categories.categoria%> checked >
+                                    <%=productToEdit.categories%></label>
+                            </div>
                             <div>
                                 <label for="XS">
                                     <input type="radio" name="XS" value="XS" class="tallas" id="XS">

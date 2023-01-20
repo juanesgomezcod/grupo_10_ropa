@@ -26,7 +26,7 @@ router.get('/productDetail/:id', controller.productDetail);
 
 //CREAR UN PRODUCTO
 router.get('/newProduct', controller.create);
-router.post('/store', upload.any(), controller.adicional)
+router.post('/store', upload.single("imagen"), controller.adicional)
 
 //editar un producto
 router.get('/edit/:id', controller.edit); 

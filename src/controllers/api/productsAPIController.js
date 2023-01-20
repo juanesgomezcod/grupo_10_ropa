@@ -12,9 +12,11 @@ const Users = db.User;
 
 const productsAPIController = {
     'list': (req, res) => {
-        db.Product.findAll({
-            include: ['category']
-        })
+        db.Product.findAll()
+        //esto va dentro del parentesis
+        // {
+        //     "include": ['category']
+        // }
         .then(products => {
             let respuesta = {
                 meta: {
@@ -29,10 +31,12 @@ const productsAPIController = {
     },
     
     'detail': (req, res) => {
-        db.Product.findByPk(req.params.id,
-            {
-                include : ['category']
-            })
+        db.Product.findByPk(req.params.id)
+            //esto esta dentro del parentesis
+            // req.params.id,
+            // {
+            //     "include" : ['category']
+            // }
             .then(product => {
                 let respuesta = {
                     meta: {
