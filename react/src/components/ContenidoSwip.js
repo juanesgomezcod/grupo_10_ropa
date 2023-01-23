@@ -24,7 +24,6 @@ function ContenidoSwip(){
         fetch("http://localhost:3001/api/users")
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
                 setUsers(data)})
 
     }
