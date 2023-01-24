@@ -20,7 +20,7 @@
     <%- include("./partials/headerNavBar") %>
     <div class="product-container">
         <h3>Nombre : <%= Product.nombre %> </h3>
-        <h4>Talla : <%= Product.talla %> </h4>
+        <h4>Talla : <%=Product.sizes.talla%> </h4>
         <img src="/images/store/<%=Product.imagen%>">
         <p> $<%= (Product.precio) %></p>
         <p><%= (Product.descripcion) %></p>

@@ -50,11 +50,6 @@
                                     <%=productToEdit.sizes.talla%></label>
                             </div>
                             <div>
-                                <label for=<%=productToEdit.idcategoria%> >
-                                    <input type="radio" name=<%=productToEdit.categories.categoria%> value=<%=productToEdit.categories.categoria%> class="tallas" id=<%=productToEdit.categories.categoria%> checked >
-                                    <%=productToEdit.categories%></label>
-                            </div>
-                            <div>
                                 <label for="XS">
                                     <input type="radio" name="XS" value="XS" class="tallas" id="XS">
                                     XS</label>
@@ -82,7 +77,7 @@
                             <div class="inputs-6">
                                 <label for="precio">Precio</label>
                                 <input type="number" name="precio" id="precio" value= "<%= productToEdit.precio %> "
-                                    placeholder="precio $" required>
+                                    placeholder="<%= productToEdit.precio %>" required>
                             </div>
 
                         </div>
