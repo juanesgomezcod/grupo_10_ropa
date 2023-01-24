@@ -33,13 +33,13 @@
             </div>
 
             <div class="page-products">
-                <% for(let i=0; i<Product.length;i++){ %>
+                <% for(let i=0; i < Product.length; i++){ %>
                 <div class="product-container">
-                    <h3>Nombre : <a href="/productDetail/<%=Product[i].id%>"><%= Product[i].nombre %></a> </h3>
-                    <h4>Talla : <%= Product[i].talla %> </h4>
+                    <h3>Nombre : <a href="/productDetail/<%=Product[i].id%>"><%=Product[i].nombre%></a> </h3>
+                    <h4>Talla : <%=(Product[i].sizes.talla)%></h4>
                     <img src= "/images/store/<%=Product[i].imagen%>">
-                    <p> $<%= (Product[i].precio) %></p>
-                    <p><%= (Product[i].descripcion) %></p>
+                    <p> $<%=(Product[i].precio)%></p>
+                    <p><%=(Product[i].descripcion)%></p>
                     <button class="button-buy">Comprar</button>
 
                 </div>  

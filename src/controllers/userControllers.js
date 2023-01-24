@@ -12,7 +12,6 @@ const { validationResult } = require("express-validator")
 const db = require("../database/models")
 
 
-
 const controller = {
 
     // Lista de usuarios completa
@@ -20,9 +19,7 @@ const controller = {
     list: (req, res) => {
 		db.User.findAll()
 			.then(users => {
-				res.render('userList', {
-					users
-				})
+				res.render('userList', {users})
 			})
 	},
 

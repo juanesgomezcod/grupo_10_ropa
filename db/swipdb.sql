@@ -7,17 +7,18 @@ USE swip_db;
 --
 
 CREATE TABLE products  (
-   id INT NOT NULL,
+   id INT NOT NULL AUTO_INCREMENT,
    nombre CHAR(100) NOT NULL,
    descripcion TEXT NOT NULL,
    precio INT NOT NULL,
    id_talla INT,
    id_categoria  INT,
+   imagen TEXT,
    PRIMARY KEY (id)
 );
 
 CREATE TABLE categories (
-   id INT NOT NULL AUTO_INCREMENT,
+   id INT NOT NULL,
    categoria TEXT NOT NULL,
    PRIMARY KEY (id)
 );

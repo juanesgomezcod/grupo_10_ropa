@@ -6,7 +6,7 @@ const db = require("../database/models")
 const controller = {
    //listado
 	store: (req, res) => {
-		db.Product.findAll()
+		db.Product.findAll({include:{all:true}})
 		.then(function(Product){
 			res.render("store", {Product})
 		})
@@ -15,7 +15,7 @@ const controller = {
 
     // Detalle de un producto
     productDetail: (req, res) => {
-        db.Product.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id, {include:{all:true}})
 		// 	, {
 		// 	include: [{association: "id_categoria"}, {association: "Size"}]
 		// })
@@ -29,33 +29,30 @@ const controller = {
         res.render("productCart");
     }, 
 
-    
-
     // Crear Nuevo producto en el formulario
     create : async(req, res) => {
 		const Category = await db.Category.findAll()
 		const Size = await db.Size.findAll()
-		res.render("newProduct",{Category, Size})
-
+		res.render("newProduct", {Category, Size})
     },
 
     // nuevo producto para guardar
+
     adicional : (req, res) => {
 		db.Product.create({
-			nombre: req.body.nombre,
+			nombre: req.body.nombreProducto,
 			descripcion: req.body.descripcion,
 			precio: req.body.precio,
-			talla: req.body.talla,
-			categoria: req.body.Category,
-			imagen: req.file.filename
+			id_talla: req.body.size,
+			id_categoria: req.body.category,
+			imagen: req.file?.filename || "default.png",
 		})
-		res.redirect("/store")
-		
+		res.redirect("/store")	
 	},
+
 
     // formulario para editar
 	edit : (req, res) => {
-		
 		let productToEdit = db.Product.findByPk(req.params.id, {include:{all:true}})
 			.then(function(productToEdit){
 				res.render('editProduct', {productToEdit})
@@ -66,11 +63,12 @@ const controller = {
     // Update - Method to update
 	update : (req, res) => {
 		db.Product.update({
-			nombre: req.body.nombre,
+			nombre: req.body.nombreProducto,
 			descripcion: req.body.descripcion,
 			precio: req.body.precio,
 			talla: req.body.talla,
-			categoria: req.body.Category
+			categoria: req.body.Category,
+			imagen: req.file?.filename || "default.png",
 		},{
 			where:{
 				id : req.params.id

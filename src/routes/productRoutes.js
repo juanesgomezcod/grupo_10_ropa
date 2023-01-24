@@ -30,7 +30,7 @@ router.post('/store', upload.single("imagen"), controller.adicional)
 
 //editar un producto
 router.get('/edit/:id', controller.edit); 
-router.patch('/edit/:id', upload.any(), controller.update); 
+router.patch('/edit/:id', upload.single("imagen"), controller.update); 
 
 //borrar un producto
 router.post('/delete/:id', controller.destroy); 

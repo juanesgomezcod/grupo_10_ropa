@@ -18,10 +18,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER
         },
         id_talla:{
-            type: DataTypes.INTEGER
+            type: DataTypes.TINYINT
         },
         id_categoria:{
-            type: DataTypes.INTEGER
+            type: DataTypes.TINYINT
         },
         imagen:{
             type: DataTypes.TEXT
@@ -39,8 +39,6 @@ module.exports = (sequelize, DataTypes) => {
             as:"Categories",
             foreignKey: "id_categoria"
         });
-
-
     }
 
     Product.associate = function(models){
@@ -48,9 +46,8 @@ module.exports = (sequelize, DataTypes) => {
             as:"sizes",
             foreignKey: "id_talla"
         });
-
-
     }
+    
     return Product;
 }
 

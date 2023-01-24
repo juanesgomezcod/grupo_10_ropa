@@ -12,22 +12,24 @@
         <section>
             <a href="/"><img class="logo" src="/images/Logo/logo.png"></a>
         </section>
-
-        <div class="busqueda">
-            <form class="formularioDeBusqueda" action="" method="get">
-                <span class="icon"><i class="fa fa-search"></i></span>
-                <input type="search" id="search" placeholder="Buscar productos..." />
-            </form>
+        <!-- <% if(locals.isLogged){ %> -->
+        <div class="user-menu">
+            <div class="dropdown">
+                <img class="avatar-mini" src="/images/avatars/<%=user.avatar%>">
+                <button class="user-menu-button"><%= user.nombres%> <%= user.apellidos%> </button>
+                <div class="dropdown-content">
+                    <a href="/profile">Mi perfil</a>
+                    <a href="/">Logout</a>
+                </div>
+            </div>
         </div>
-        <% if(locals.isLogged){ %>
-
-            <% } %> else <% { %> 
+            <!-- <% } %> else <% { %>  -->
         <div class="login-carrito">
             <a href="/login"><i class="far fa-user"></i></a>
             <p class="texto"><a href="/login"> Iniciar sesión</a></p>
             <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
             <p class="texto"><a href="/productCart"> Carrito de compras </a></p>
-            <% } %>
+            <!-- <% } %> -->
         </div>
     </div>
 </header>

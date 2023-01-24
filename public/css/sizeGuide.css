@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Roboto&display=swap');
+
+*{
+    font-family: Be Vietnam Pro;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.guia-completa{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(239, 237, 234);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 0 20px 30px black;
+    transition: 1s;
+    margin: 0 auto;
+}
+
+.card:hover{
+    transform: translateX(50%);
+}
+
+.card .imgBox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    box-shadow: 0 20px 30px black;
+    z-index: 10;
+    transition: 1s;
+}
+
+.card:hover .imgBox{
+    transform: rotateY(-180deg);
+}
+
+.imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+}
+
+.image2{
+    backface-visibility: hidden;
+}
+
+
+.details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* estilos tabla */
+
+.table{
+    padding: 30px;
+    font-size: 80%;
+
+    /* display: flex;
+    align-items: flex-end;
+    justify-content: center; */
+}
+
+caption{
+    font-size: x-small;
+    font-family: Helvetica;
+    color: gray;
+}
+
+.titulo{
+    font-size: 15px;
+    font-weight: bold;
+    color: black !important;
+}
+
+.celda{
+    background-color: rgb(217, 217, 217);
+
+
+    /* display: flex;
+    justify-content: center; */
+}
+
+.celda td{
+    padding: 12px;
+}
+
+@media (min-width: 365px) and (max-width: 900px){
+    .guia-completa{
+        display: block;
+        min-height: 100vh;
+    }
+
+    .card{
+        width: 200px;
+        height: 300px;
+        transform-style: preserve-3d;
+        margin-top: 40px;
+    }
+
+    .details{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .table{
+       font-size: 60%;
+       
+    }
+}

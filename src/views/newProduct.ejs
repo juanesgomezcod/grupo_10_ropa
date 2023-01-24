@@ -9,7 +9,6 @@
     <title>Creacion y Edicion de productos</title>
 </head>
 <%- include ("./partials/headerMain")%>
-
     <body>
         <form action="/store" method="POST" enctype="multipart/form-data">
 
@@ -24,15 +23,26 @@
                     <label for="descripcion">Descripción </label>
                     <input type="text" name="descripcion" id="descripcion" placeholder="Descripción" required>
                 </div>
-                <div class="inputs-3">
-                    <label for="categoria">Categoria:</label>
-                    <select name="Categorias" id="category" class="form-input">
+                <!-- <div class="inputs-3">
+                    <label for="category">Categoria:</label>
+                    <select name="category" id="category" class="form-input">
                         <% for (let i=0; i < Category.length; i++) { %> 
-                            <option value="<%=Category[i].id%>">
-                                <%= Category[i].nombre %> 
+                            <option value="<%Category[i].id %>"> 
+                                <%=Category[i].id%>
+                                <%= Category[i].categoria %> 
                             </option>
                         <% } %> 
-                    </select>
+                    </select> -->
+
+                    <div class="inputs-3">
+                        <% for (let i= 0; i < Category.length; i++) { %> 
+                            <div>
+                                <label for=<%= Category[i].talla %>>
+                                    <input type="radio" name="category" value= "<%=Category[i].id %>" class="category" id=<%= Category[i].categoria %>>
+                                    <%= Category[i].categoria %></label>
+                            </div>
+                            <% } %>
+
                 </div>
                 <div class="inputs-4">
                     <h4 class="title">Elije la foto del producto</h4>
@@ -40,12 +50,21 @@
                 </div>
 
                 <div class="inputs-5">
-                    <h4>Tallas</h4>
-                    <div class="tamaños">
+                    <!-- <h4>Tallas</h4>
+                    <select name="size" id="size" class="form-input">
                         <% for (let i=0; i < Size.length; i++) { %> 
+                            <option value ="<%=Size[i].id%>"> 
+                                <%=Size[i].id%>
+                                <%=Size[i].talla %> 
+                            </option>
+                        <% } %>  -->
+
+                    <div class="tamaños">
+                        <% for (let i= 0; i < Size.length; i++) { %> 
                             <div>
                                 <label for=<%= Size[i].talla %>>
-                                    <input type="radio" name=size value=<%= Size[i].talla %> class="tallas" id=<%= Size[i].talla %>>
+                                    <input type="radio" name="size" value= "<%=Size[i].id %>" class="tallas" id=<%= Size[i].talla %>>
+                                    <%=Size[i].id %>
                                     <%= Size[i].talla %></label>
                             </div>
                             <% } %>
