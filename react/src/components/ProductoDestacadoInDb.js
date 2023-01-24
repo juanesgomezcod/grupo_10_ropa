@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import imagenFondo from '../assets/images/mandalorian.jpg';
+import imagenFondo from '../assets/images/ropa1.jpg';
 
 function ProductoDestacadoInDb(){
 
@@ -18,10 +18,10 @@ function ProductoDestacadoInDb(){
                 </div>
                 <div className="card-body">
                     <div className="text-center">
-                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Star Wars - Mandalorian "/>
+                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Producto Destacado "/>
                     </div>
-                    <p ref={parrafo}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
+                    <p ref={parrafo}>Hoodie Astroworld. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
+                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="http://localhost:3001/productDetail/1">Ver Detalle del Producto</a>
                 </div>
             </div>
         </div>
