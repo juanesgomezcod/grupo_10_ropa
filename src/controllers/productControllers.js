@@ -42,6 +42,7 @@ const controller = {
     // nuevo producto para guardar
     adicional : (req, res) => {
 		db.Product.create({
+			
 			nombre: req.body.nombre,
 			descripcion: req.body.descripcion,
 			precio: req.body.precio,
