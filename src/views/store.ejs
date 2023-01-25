@@ -10,20 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
     <title>Store</title>
     <link rel="stylesheet" href="/css/store.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="./css/footer.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.4/js/v4-shims.js" rel="stylesheet"></script> 
-    <link href="https://use.fontawesome.com/releases/v5.0.4/js/fontawesome.js" rel="stylesheet"> </script>
+    <link href="https://use.fontawesome.com/releases/v5.0.4/js/v4-shims.js" rel="stylesheet">
+    </script>
+    <link href="https://use.fontawesome.com/releases/v5.0.4/js/fontawesome.js" rel="stylesheet">
+    </script>
 
 </head>
-    <%- include ("./partials/headerMain")%>
+<%- include ("./partials/headerMain")%>
     <%- include ("./partials/headerNavBar")%>
 
         <body>
-
-
             <div class="store-encabezado">
                 <h2> STORE</h2>
             </div>
@@ -34,20 +32,28 @@
 
             <div class="page-products">
                 <% for(let i=0; i < Product.length; i++){ %>
-                <div class="product-container">
-                    <h3>Nombre : <a href="/productDetail/<%=Product[i].id%>"><%=Product[i].nombre%></a> </h3>
-                    <h4>Talla : <%=(Product[i].sizes.talla)%></h4>
-                    <img src= "/images/store/<%=Product[i].imagen%>">
-                    <p> $<%=(Product[i].precio)%></p>
-                    <p><%=(Product[i].descripcion)%></p>
-                    <button class="button-buy">Comprar</button>
-
-                </div>  
-                <% } %>
+                    <div class="product-container">
+                        <div class="nombre">
+                            <h3> <a href="/productDetail/<%=Product[i].id%>">
+                                    <%=Product[i].nombre%>
+                                </a></h3>
+                        </div>
+                        <div class="talla-disponible">
+                            <h4>Talla | <%=(Product[i].sizes.talla)%>
+                            </h4>
+                        </div>
+                        <img src="/images/store/<%=Product[i].imagen%>">
+                        <div>
+                            <p class="precio"> $ <%=(Product[i].precio)%> COP</p>
+                            <p class="descripcion">
+                                <%=(Product[i].descripcion)%>
+                            </p>
+                        </div>
+                        <button class="button-buy">Comprar</button>
+                    </div>
+                    <% } %>
             </div>
-
-
         </body>
-    <!-- <%- include ("./partials/footer")%> -->
+        <!-- <%- include ("./partials/footer")%> -->
 
 </html>

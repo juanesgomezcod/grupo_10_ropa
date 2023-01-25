@@ -43,9 +43,9 @@ router.post('/login', validationLogged, controller.loginProcess);
 //perfil del usuario
 router.get('/profile/', authMiddleware, controller.profile);
 
-//editar perfil del usuario 
-router.get('/edit/:id', controller.editProfile);
-router.put('/edit/:id', uploadFile.single("avatar"), validationCreate, controller.UpdateProfile);
+//editar perfil del usuario AQUI SE PISAN LAS RUTAS CON EL EDIT DE PRODUCTOS 
+// router.get('/edit/:id', controller.editProfile);
+// router.put('/edit/:id', uploadFile.single("avatar"), validationCreate, controller.UpdateProfile);
 
 //logout
 router.get('/logout/', controller.logout);
