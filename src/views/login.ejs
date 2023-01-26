@@ -15,13 +15,17 @@
   <%- include ("./partials/headerMain")%>
     <main>
       <div class = formCompleto>
-        <form action="/login" method="POST">
-          <div class="register-container">
-
+        <form action="/login" method="POST" class="login" id="form-login">
+          <div class="login-container">
             <h1 class="title">Ingresar</h1>
+            <section class="errores">
+              <ul>
+
+              </ul>
+            </section> 
             <div class="inputs">
               <label for="mail">Correo electrónico</label>
-              <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
+              <input  class="email" type="email" name="email" id="email" placeholder="Correo electrónico">
               <% if (locals.errors && errors.email) { %>
                 <div class="texto-error">
                     <%= errors.email.msg %>
@@ -30,7 +34,7 @@
             </div>
             <div class="inputs">
               <label for="clave">Contraseña</label>
-              <input type="password" name="clave" id="clave" placeholder="Contraseña" required>
+              <input type="password" name="clave" id="clave" placeholder="Contraseña">
               <% if (locals.errors && errors.clave) { %>
                 <div class="texto-error">
                   <%= errors.clave.msg %>
@@ -38,7 +42,7 @@
                 <% } %>
             </div>
             <div>
-              <label for=""><input type="checkbox" name="userEmail"> Recordar mi cuenta</label>
+              <label for=""><input type="checkbox" name="userLoggedMiddleware"> Recordar mi cuenta</label>
             </div>
             <div class="account-buttons">
               <button type="submit" class="account sub">Iniciar sesión</button>
@@ -52,8 +56,6 @@
       </div>
     </main>
     <%- include ("./partials/footer")%>
+    <script src="/js/validationLogin.js"></script>
 </body>
-
-
-
 </html>

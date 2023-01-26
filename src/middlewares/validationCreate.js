@@ -6,8 +6,8 @@ const db = require("../database/models")
 
 const validationCreate = [
 
-    body('nombres').notEmpty().withMessage('No puede estar vacio').isString().withMessage('Ingrese un nombre válido').bail().isLength({ min: 2}),
-    body('apellidos').notEmpty().withMessage('No puede estar vacio').isString().withMessage('Ingrese un nombre válido').bail(),
+    body('nombres').notEmpty().withMessage('No puede estar vacio').isString().withMessage('Ingrese un nombre válido').bail().isLength({ min: 2}).withMessage('Ingrese al menos 2 cáracteres'),
+    body('apellidos').notEmpty().withMessage('No puede estar vacio').isString().withMessage('Ingrese un nombre válido').bail().isLength({ min: 2}).withMessage('Ingrese al menos 2 cáracteres'),
     body('email').notEmpty().withMessage('No puede estar vacio').isEmail().withMessage('Debe ser un email válido').bail().isString().withMessage('Ingrese una cadena de cáracteres').bail(),
     body('clave')
     .notEmpty()
