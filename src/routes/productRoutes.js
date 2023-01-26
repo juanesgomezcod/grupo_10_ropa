@@ -4,6 +4,10 @@ const router = express.Router();
 const multer = require('multer');
 const path = require("path");
 
+
+//requerimos los middlewares
+const validationProduct = require('../middlewares/validationProducts'); 
+
 // controller
 const controller = require('../controllers/productControllers');
 
@@ -25,8 +29,8 @@ router.get('/store', controller.store);
 router.get('/productDetail/:id', controller.productDetail);
 
 //CREAR UN PRODUCTO
-router.get('/newProduct', controller.create);
-router.post('/store', upload.single("imagen"), controller.adicional)
+router.get('/newProduct', validationProduct, upload.single("imagen"), controller.create);
+router.post('/store', validationProduct, upload.single("imagen"), controller.adicional)
 
 //editar un producto
 router.get('/edit/:id', controller.edit); 

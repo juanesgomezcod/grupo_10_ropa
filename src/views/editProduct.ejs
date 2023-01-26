@@ -12,14 +12,20 @@
 <%- include ("./partials/headerMain")%>
 
     <body>
-        <form action="/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+        <main>
+            <form action="/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="form-newProduct" id="form-newProduct">
 
                 <div class="formulario">
                     <h3 class="title">Edicion de Productos</h3>
+                    <section class="errores">
+                        <ul>
+    
+                        </ul>
+                    </section>
                     <div class="inputs-1">
                         <label for="nombreProducto">Nombre </label>
-                        <input type="text" name="nombreProducto" id="nombreProducto" value="<%= productToEdit.nombre %> "
-                            placeholder="Nombre del producto" required>
+                        <input type="text" name="nombreProducto" id="nombreProduct"
+                            value="<%= productToEdit.nombre %> " placeholder="Nombre del producto" required>
                     </div>
                     <div class="inputs-2">
                         <label for="descripcion">Descripción </label>
@@ -46,8 +52,10 @@
                         <div class="tamaños">
                             <div>
                                 <label for=<%=productToEdit.sizes.talla%> >
-                                    <input type="radio" name=<%=productToEdit.sizes.talla%> value=<%=productToEdit.sizes.talla%> class="tallas" id=<%=productToEdit.sizes.talla%> checked >
-                                    <%=productToEdit.sizes.talla%></label>
+                                    <input type="radio" name=<%=productToEdit.sizes.talla%> value=
+                                    <%=productToEdit.sizes.talla%> class="tallas" id=<%=productToEdit.sizes.talla%>
+                                            checked >
+                                            <%=productToEdit.sizes.talla%></label>
                             </div>
                             <div>
                                 <label for="XS">
@@ -76,7 +84,7 @@
                             </div>
                             <div class="inputs-6">
                                 <label for="precio">Precio</label>
-                                <input type="number" name="precio" id="precio" value= "<%= productToEdit.precio %> "
+                                <input type="number" name="precio" id="precio" value="<%= productToEdit.precio %> "
                                     placeholder="<%= productToEdit.precio %>" required>
                             </div>
 
@@ -90,8 +98,11 @@
                     <br>
                     <br>
                 </div>
-        </form>
+            </form>
+        </main>
+        <%- include ("./partials/footer")%>
     </body>
-    <%- include ("./partials/footer")%>
+
+    <script src="/js/validationUpdateProduct.js"></script>
 
 </html>
