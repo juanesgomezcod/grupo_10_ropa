@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import imagenFondo from '../assets/images/ropa1.jpg';
+import imagenFondo from '../assets/images/hoodieAstroworld.jpg';
 
 function ProductoDestacadoInDb(){
 

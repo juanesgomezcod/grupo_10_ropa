@@ -1,6 +1,7 @@
 //const fs = require('fs');
 //const path = require('path');
 const db = require("../database/models")
+const Op = db.Sequelize.Op;
 
 
 const controller = {
@@ -11,6 +12,23 @@ const controller = {
 			res.render("store", {Product})
 		})
 	},
+
+	// Barra de Busqueda
+	search: async (req, res) => {
+		try {
+		  let products = await db.Product.findAll({
+			where: {
+			  products: { [Op.like]: `%${req.query.search}%` },
+			},
+		  });
+		  return res.render("/search", {
+			allProducts: nombre,
+			titulo: "Search Result's",
+		  });
+		} catch (error) {
+		  console.log(error);
+		}
+	  },
 
 
     // Detalle de un producto

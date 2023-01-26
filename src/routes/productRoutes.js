@@ -21,6 +21,9 @@ var upload = multer({storage: storage})
 // Todos los productos
 router.get('/store', controller.store);
 
+//Barra de Busqueda
+router.get("/search", controller.search);
+
 //llamar un producto
 router.get('/productDetail/:id', controller.productDetail);
 

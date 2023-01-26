@@ -19,7 +19,9 @@ const controller = {
 	list: (req, res) => {
 		db.User.findAll()
 			.then(users => {
-				res.render('userList', { users })
+				res.render('userList', { 
+					users 
+				})
 			})
 	},
 
@@ -101,7 +103,7 @@ const controller = {
 							})
 							.catch((error) => {
 								//crear pagina de error y borrar este console
-								console.log(error);
+								res.send(error);
 							});
 					}
 
@@ -126,10 +128,12 @@ const controller = {
 			where: {
 				email: req.body.email
 			}
-		});
+		})
 
 
-		if (usuarioLogin) {
+		.then((usuarioLogin) => {
+
+			if (usuarioLogin) {
 			let claveOk = bcryptjs.compareSync(
 				req.body.clave,
 				usuarioLogin.clave
@@ -162,7 +166,8 @@ const controller = {
 					msg: 'El email o la contraseña son inválidos',
 				},
 			},
-		})
+		});
+	})
 		.catch((error) => {
 			res.send(error);
 		});

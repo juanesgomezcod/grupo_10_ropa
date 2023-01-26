@@ -1,0 +1,13 @@
+.product-container {
+    margin: 30px;
+    padding: 20px 16px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .imagenes{
+    width: 20%;
+  height: auto;
+  display: flex;
+  align-items: center;
+}

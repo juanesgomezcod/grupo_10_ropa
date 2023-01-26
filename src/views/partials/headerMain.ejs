@@ -12,15 +12,15 @@
         <section>
             <a href="/"><img class="logo" src="/images/Logo/logo.png"></a>
         </section>
-        <form class="d-flex" method="GET" action="/products/search">
-            <input class="form-control me-2" type="search" name="shoes" placeholder="Search" aria-label="Search">
+        <form class="d-flex" method="GET" action="/search">
+            <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-secondary" type="submit">Search</button>
         </form>
         <% if(locals.isLogged){ %>
             <div class="user-menu">
                 <div class="dropdown">
-                    <img class="avatar-mini" src="/images/avatars/<%=locals.user.avatar%>">
-                    <button class="user-menu-button"><%= locals.user.nombres%> <%= locals.user.apellidos%> </button>
+                    <img class="avatar-mini" src="/images/avatars/<%=locals.userLogged.avatar%>">
+                    <button class="user-menu-button"><%= locals.userLogged.nombres%> <%= locals.userLogged.apellidos%> </button>
                     <div class="dropdown-content">
                         <a href="/profile">Mi perfil</a>
                         <form action="/logout/">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </div>
-                <% } %> else <% { %> 
+                <% }  else  { %> 
             <div class="login-carrito">
                 <a href="/login"><i class="far fa-user"></i></a>
                 <p class="texto"><a href="/login"> Iniciar sesión</a></p>

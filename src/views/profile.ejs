@@ -6,37 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Usuario</title>
-    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="/css/profile.css">
 </head>
 <%- include("./partials/headerMain") %>
     <%- include ("./partials/headerNavBar")%>
         <body>
 
-            <div>
-                <div>
-                    <div>
-                        <h2>Hola <%= locals.user.nombres%> </h2>
-                        
-                        <img src="/images/avatars/<%=locals.user.avatar%>">
-                        <br>
-                        <br>
-                        <div>
-                            <%= locals.user.email %> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <a href="/editProfile/<%= locals.user.id %> ">
-                <button class="button-buy">editar</button>
-                </a>
+            <div class="product-container">
+                <h3>Hola <%= locals.user.nombres%> </h3>
+                <img class="imagenes" src="/images/avatars/<%=locals.user.avatar%>">
+                
+                <a href="/editProfile/<%= locals.user.id %> ">
+                    <button class="button-buy">editar</button>
+                    </a>
                 <form action="/deleteProfile/<%= locals.user.id %> " method="POST">
                     <button type="submit" class="button-buy">borrar</button>
                     </form>
-
-                    <form action="/logout/">
+                <form action="/logout/">
                         <button type="submit" class="button-buy">Cerrar Sesion</button>
                         </form>
+            </div> 
+
+            
+
+                    
 
 
         </body>
