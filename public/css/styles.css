@@ -37,7 +37,6 @@
     40%, 60%{
         box-shadow: none;
     }
-
 }
 
 .formularioDeBusqueda{
@@ -177,7 +176,7 @@
 /* estilos Guia de tallas, como encargar, banner */
 .banner{
     display: none;
-    width:680px;
+    width: 1220px;
     height: auto;
     margin: 50px auto 0;
     overflow: hidden; 
@@ -189,7 +188,6 @@
     display: flex;
     padding: 0;
     width: 400%;
-
     animation: slide 20s infinite alternate ease-in-out;
 }
 
@@ -256,6 +254,7 @@
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
     background-color: rgb(247, 244, 244);
+    border: 1px solid rgb(114, 114, 114);
 }
 
 .encargos{
@@ -265,7 +264,9 @@
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
     background-color: rgb(247, 245, 245);
+    border: 1px solid rgb(114, 114, 114);
 }
+
 .descuentos{
     margin: 15px;
     padding: 16px 26px 55px 26px;
@@ -273,6 +274,7 @@
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
     background-color: rgb(247, 245, 245);
+    border: 1px solid rgb(114, 114, 114);
 }
 
 .trabajo{
@@ -282,6 +284,7 @@
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
     background-color: rgb(247, 245, 245);
+    border: 1px solid rgb(114, 114, 114);
 }
 
 
@@ -315,7 +318,7 @@
   }
 
   .boton:hover{
-    background-color: rgb(247, 213, 213);
+    background-color: rgb(191, 190, 190);
     color: white;
   }
 

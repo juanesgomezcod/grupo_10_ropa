@@ -13,93 +13,98 @@
 <body>
     <%- include ("./partials/headerMain")%>
         <main>
-            <div class="tituloregistro">
-                <h4>Registrarse</h4>
-            </div class="registro">
-                            <!-- Formulario que apunta a register, viaja por POST Y el enctype indica que es información que viene con archivos -->
-                            <form action="/register" method="POST" enctype="multipart/form-data">
-                            <div class="registrarse">
-                                <div class="nombreregistro">
-                                    <label for="nombres">Nombre</label>
-                                </div>
-                                <div class="nombreregistro">
-                                    <input type="text" name="nombres" value ="<%= locals.old ? old.nombres: null %>">
-                                </div>
-                                <% if (locals.errors && errors.nombres) { %>
-                                    <div class="texto-error">
-                                        <%= errors.nombres.msg %>
-                                    </div>
-                                    <% } %>
-                                        <div class="apellidosregistro">
-                                            <label for="apellidos">Apellidos</label>
-                                        </div>
-                                        <div class="apellidosregistro">
-                                            <input type="text" name="apellidos" value ="<%= locals.old ? old.apellidos: null %>">
-                                        </div>
-                                        <% if (locals.errors && errors.apellidos) { %>
-                                            <div class="texto-error">
-                                                <%= errors.apellidos.msg %>
-                                            </div>
-                                            <% } %>
-
-                                        <div class="emaillogin">
-                                            <label for="email">Correo Electronico</label>
-                                        </div>
-                                        <div class="emaillogin">
-                                            <input type="email" name="email" value ="<%= locals.old ? old.email: null %>">
-                                        </div>
-                                        <% if (locals.errors && errors.email) { %>
-                                            <div class="texto-error">
-                                                <%= errors.email.msg %>
-                                            </div>
-                                            <% } %>
-
-                                        <div class="clavelogin">
-                                            <label for=" clave">Contraseña</label>
-                                        </div>
-                                        <div class=" clavelogin">
-                                            <input type=" password" name= "clave">
-                                        </div>
-                                        <% if (locals.errors && errors.clave) { %>
-                                            <div class="texto-error">
-                                                <%= errors.clave.msg %>
-                                            </div>
-                                            <% } %>
-
-                                        <div class= "claveconfirm">
-                                            <label for= "claveconfirm">Confirmar Contraseña</label>
-                                        </div>
-
-                                        <div class=" claveconfirm">
-                                            <input type= "clave" name= "claveconfirm">
-                                        </div>
-
-                                        <% if (locals.errors && errors.claveconfirm) { %>
-                                            <div class="texto-error">
-                                                <%= errors.claveconfirm.msg %>
-                                            </div>
-                                            <% } %>
-
-                                        <div class="avatar">
-                                            <h4 class="title">Elije tu Foto</h4>
-                                            <input type="file" name="avatar" class="avatar-profile" id="foto-Profile">
-                                        </div>
-
-                                        <% if (locals.errors && errors.avatar) { %>
-                                            <div class="texto-error">
-                                                <%= errors.avatar.msg %>
-                                            </div>
-                                            <% } %>
-                                        <br>
-                                        <div class="botonregistro">
-                                            <button type="iniciosesion" class="boton-registro">Registrarse</button>
-                                        </div>
-
+            <div class=formCompleto></div>
+            <!-- Formulario que apunta a register, viaja por POST Y el enctype indica que es información que viene con archivos -->
+            <form action="/register" method="POST" enctype="multipart/form-data" class="formCompleto">
+                <div class="registrarse">
+                    <h1 class="title">Registrarse</h1>
+                    <br>
+                    <div class="nombreregistro">
+                        <label for="nombres">Nombre</label>
+                    </div>
+                    <div class="nombreregistro">
+                        <input class="ipuntnombreregistro" type="text" name="nombres" value="<%= locals.old ? old.nombres: null %>">
+                    </div>
+                    <% if (locals.errors && errors.nombres) { %>
+                        <div class="texto-error">
+                            <%= errors.nombres.msg %>
+                        </div>
+                        <% } %>
+                            <div class="apellidosregistro">
+                                <label for="apellidos">Apellidos</label>
                             </div>
-                            </form>
+                            <div class="apellidosregistro">
+                                <input class="ipuntapellido" type=" text" name="apellidos"
+                                    value="<%= locals.old ? old.apellidos: null %>">
+                            </div>
+                            <% if (locals.errors && errors.apellidos) { %>
+                                <div class="texto-error">
+                                    <%= errors.apellidos.msg %>
+                                </div>
+                                <% } %>
+
+                                    <div class="emaillogin">
+                                        <label for="email">Correo Electronico</label>
+                                    </div>
+                                    <div class="emaillogin">
+                                        <input class="ipuntemail" type=" email" name="email"
+                                            value="<%= locals.old ? old.email: null %>">
+                                    </div>
+                                    <% if (locals.errors && errors.email) { %>
+                                        <div class="texto-error">
+                                            <%= errors.email.msg %>
+                                        </div>
+                                        <% } %>
+
+                                            <div class="clavelogin">
+                                                <label for=" clave">Contraseña</label>
+                                            </div>
+                                            <div class=" clavelogin">
+                                                <input class="inputclave" type=" password" name="clave">
+                                            </div>
+                                            <% if (locals.errors && errors.clave) { %>
+                                                <div class="texto-error">
+                                                    <%= errors.clave.msg %>
+                                                </div>
+                                                <% } %>
+
+                                                    <div class="claveconfirm">
+                                                        <label for="claveconfirm">Confirmar Contraseña</label>
+                                                    </div>
+
+                                                    <div class=" claveconfirm">
+                                                        <input class="inputclave" type=" clave" name="claveconfirm">
+                                                    </div>
+
+                                                    <% if (locals.errors && errors.claveconfirm) { %>
+                                                        <div class="texto-error">
+                                                            <%= errors.claveconfirm.msg %>
+                                                        </div>
+                                                        <% } %>
+
+                                                            <div class="avatar">
+                                                                <h4 class="titleFoto">Elije tu Foto </h4>
+                                                                <input type="file" name="avatar" class="avatar-profile"
+                                                                    id="foto-Profile">
+                                                            </div>
+
+                                                            <% if (locals.errors && errors.avatar) { %>
+                                                                <div class="texto-error">
+                                                                    <%= errors.avatar.msg %>
+                                                                </div>
+                                                                <% } %>
+                                                                    <br>
+                                                                    <div class="account-buttons">
+                                                                        <button type="iniciosesion"
+                                                                        class="account sub">Registrarse</button>
+                                                                    </div>
+
+                </div>
+                </div>
+            </form>
         </main>
 
-    
+
 </body>
 <%- include ("./partials/footer")%>
 

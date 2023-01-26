@@ -24,9 +24,7 @@ window.onload = function () {
         if (imagen.value != '' && !extensiones.exec(filePath) ) {
 
             errors.push('Las extensiones permitidas son .jpeg, .jpg, .png, .gif');
-
         };
-
 
         if (errors.length > 0) {
             e.preventDefault();
@@ -41,3 +39,6 @@ window.onload = function () {
     })
 }
 
+
+let hola = ("hola Mundo");
+console.log(hola)
