@@ -12,25 +12,32 @@
         <section>
             <a href="/"><img class="logo" src="/images/Logo/logo.png"></a>
         </section>
-        <!-- <% if(locals.isLogged){ %> -->
-        <div class="user-menu">
-            <div class="dropdown">
-                <img class="avatar-mini" src="/images/avatars/<%=user.avatar%>">
-                <button class="user-menu-button"><%= user.nombres%> <%= user.apellidos%> </button>
-                <div class="dropdown-content">
-                    <a href="/profile">Mi perfil</a>
-                    <a href="/">Logout</a>
+        <form class="d-flex" method="GET" action="/products/search">
+            <input class="form-control me-2" type="search" name="shoes" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-secondary" type="submit">Search</button>
+        </form>
+        <% if(locals.isLogged){ %>
+            <div class="user-menu">
+                <div class="dropdown">
+                    <img class="avatar-mini" src="/images/avatars/<%=locals.user.avatar%>">
+                    <button class="user-menu-button"><%= locals.user.nombres%> <%= locals.user.apellidos%> </button>
+                    <div class="dropdown-content">
+                        <a href="/profile">Mi perfil</a>
+                        <form action="/logout/">
+                            <button type="submit">Cerrar Sesion</button>
+                            </form>
+                    </div>
                 </div>
             </div>
-        </div>
-            <!-- <% } %> else <% { %>  -->
-        <div class="login-carrito">
-            <a href="/login"><i class="far fa-user"></i></a>
-            <p class="texto"><a href="/login"> Iniciar sesión</a></p>
-            <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
-            <p class="texto"><a href="/productCart"> Carrito de compras </a></p>
-            <!-- <% } %> -->
-        </div>
+                <% } %> else <% { %> 
+            <div class="login-carrito">
+                <a href="/login"><i class="far fa-user"></i></a>
+                <p class="texto"><a href="/login"> Iniciar sesión</a></p>
+                <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                <p class="texto"><a href="/productCart"> Carrito de compras </a></p>
+                
+            </div>
+            <% } %>
     </div>
 </header>
 
