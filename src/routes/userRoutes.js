@@ -41,7 +41,11 @@ router.post('/register', uploadFile.single("avatar"), validationCreate, controll
 router.post('/login', validationLogged, controller.loginProcess);
 
 //perfil del usuario
-router.get('/profile/', authMiddleware, controller.profile);
+router.get('/profile', authMiddleware, controller.profile);
+
+//editar perfil
+router.get('/editProfile/:id', controller.editProfile); 
+router.patch('/editProfile/:id', uploadFile.single("avatar"), controller.updateProfile); 
 
 //editar perfil del usuario AQUI SE PISAN LAS RUTAS CON EL EDIT DE PRODUCTOS 
 // router.get('/edit/:id', controller.editProfile);
@@ -51,6 +55,6 @@ router.get('/profile/', authMiddleware, controller.profile);
 router.get('/logout/', controller.logout);
 
 //borrar un usuario
-router.delete('/delete/:id', controller.delete);
+router.delete('/deleteProfile/:id', controller.delete);
 
 module.exports = router;   

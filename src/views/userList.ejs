@@ -6,11 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de usuarios</title>
+    <link rel="stylesheet" href="/css/users.css">
 </head>
 <%- include ("./partials/headerMain")%>
     <%- include ("./partials/headerNavBar")%>
 
         <body>
+            <!-- LISTA DE PRODUCTOS  -->
+            <h1 class="titulo">Todos los Usuarios</h1>
+
+
+            <section>
+                <table>
+
+                <thead>
+                    <tr class="celda">
+                        <th>Id</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Correo</th>
+                        <th>Usuario</th>
+                        <th>Avatar</th>
+                    </tr>
+                </thead>
+            </table>
+                <% users.forEach(user=> { %>
+                    <div>
+                        <table class="table">
+                            
+                        <tr class="celda">
+                            <td><p><%= user.id%></p></td>
+                            <td><p><%= user.nombres%></p></td>
+                            <td><p><%= user.apellidos %></p></td>
+                            <td><p><%= user.email%></p></td>
+                            <td><p><%= user.administrador%></p></td>
+                            <td><img class="imagenes" src="/images/avatars/<%= user.avatar%>" alt=""></td>
+                        </tr>
+                        </table>
+                    </div>
+
+                    <% }) %>
+
+            </section>
 
         </body>
 

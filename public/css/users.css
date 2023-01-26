@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Roboto&display=swap');
+
+*{
+    font-family: Be Vietnam Pro;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.table{
+    padding: 30px;
+    font-size: 80%;
+
+    /* display: flex;
+    align-items: flex-end;
+    justify-content: center; */
+}
+
+.titulo{
+    font-size: 15px;
+    font-weight: bold;
+    color: black !important;
+}
+
+.imagenes{
+    width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.celda{
+    background-color: rgb(217, 217, 217);
+
+
+    /* display: flex;
+    justify-content: center; */
+}
+
+.celda td{
+    padding: 12px;
+}
