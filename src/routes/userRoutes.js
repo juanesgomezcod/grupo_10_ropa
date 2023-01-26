@@ -7,7 +7,7 @@ const multer = require("multer")
 //requerimos los middlewares
 
 const controller = require('../controllers/userControllers');
-const validationCreate = require('../middlewares/validation'); 
+const validationCreate = require('../middlewares/validationCreate'); 
 const validationLogged = require('../middlewares/validationLogged');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');

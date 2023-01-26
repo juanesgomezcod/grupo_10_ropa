@@ -60,9 +60,9 @@
                                         <div class=" clavelogin">
                                             <input type=" password" name= "clave">
                                         </div>
-                                        <% if (locals.errors && errors. clave) { %>
+                                        <% if (locals.errors && errors.clave) { %>
                                             <div class="texto-error">
-                                                <%= errors. clave.msg %>
+                                                <%= errors.clave.msg %>
                                             </div>
                                             <% } %>
 
@@ -74,11 +74,23 @@
                                             <input type= "clave" name= "claveconfirm">
                                         </div>
 
+                                        <% if (locals.errors && errors.claveconfirm) { %>
+                                            <div class="texto-error">
+                                                <%= errors.claveconfirm.msg %>
+                                            </div>
+                                            <% } %>
+
                                         <div class="avatar">
                                             <h4 class="title">Elije la foto del producto</h4>
                                             <input type="file" name="avatar" class="avatar-profile" id="foto-Profile">
                                         </div>
 
+                                        <% if (locals.errors && errors.avatar) { %>
+                                            <div class="texto-error">
+                                                <%= errors.avatar.msg %>
+                                            </div>
+                                            <% } %>
+                                        <br>
                                         <div class="botonregistro">
                                             <button type="iniciosesion" class="boton-registro">Registrarse</button>
                                         </div>
