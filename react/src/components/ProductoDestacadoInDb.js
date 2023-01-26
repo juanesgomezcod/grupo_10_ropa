@@ -22,8 +22,11 @@ function ProductoDestacadoInDb(){
                     </div>
                     <p ref={parrafo}>Hoodie Astroworld. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
                     <a className="btn btn-danger" target="_blank" rel="nofollow" href="http://localhost:3001/productDetail/1">Ver Detalle del Producto</a>
+                    
                 </div>
+                
             </div>
+            <a className="btn btn-danger" target="_blank" rel="nofollow" href="http://localhost:3001/list">Ver Lista de Usuarios</a>
         </div>
     )
 }

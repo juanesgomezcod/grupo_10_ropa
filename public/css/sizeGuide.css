@@ -99,6 +99,13 @@ caption{
     color: black !important;
 }
 
+.titulotarjetas{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
 .celda{
     background-color: rgb(217, 217, 217);
 
