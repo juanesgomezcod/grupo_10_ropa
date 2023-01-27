@@ -80,6 +80,16 @@
     color: #EDEEE9;
  }
 
+.formularioDeBusqueda2{
+    border: solid 1p white; 
+    border-radius: 5px; 
+    padding: 3px 3px 3px 3px; 
+    margin-right: 10px;
+    margin-left: 4px;
+    color: black;
+    background-color: #848484; 
+    background: linear-gradient(to right, gray, white);  
+}
 
 .formularioDeBusqueda input#search:focus, .formularioDeBusqueda input#search:active{
     outline:none;
@@ -90,8 +100,8 @@
 .login-carrito{
     display: flex;
     justify-content: space-between;
-    margin-left: 7px;
-    margin-right: 0px;
+    margin-left: 0px;
+    margin-right: 10px;
 } 
 
 .login-carrito a i{
@@ -106,7 +116,7 @@
 .texto a{
     display: flex;
     align-items: center;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     text-decoration: none;
     border: solid 1p white; 
@@ -420,7 +430,7 @@ border-top: 0.5px solid black;
     }
 
     .login-carrito{
-        margin-left: 480px;
+        margin-left: 660px;
     }
 
     .navegacion ul li {

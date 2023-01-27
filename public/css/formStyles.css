@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: url("/images/fondos/fondo_V15.jpg");
+    background-image: url("/images/fondos/fondo_V14.jpg");
 }
 
 .formulario{
@@ -77,7 +77,7 @@ button{
     color: black;
     padding: 4.0px;
     margin-left: 5px;  
-    background: linear-gradient(to right, #A3CCF0, white);
+    background: linear-gradient(to right, #d8dbdd, white);
 }
 
 @media (min-width: 500px) and (max-width: 600px){

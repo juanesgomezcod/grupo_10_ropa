@@ -6,20 +6,35 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* 
 .table{
     padding: 30px;
     font-size: 80%;
-
-    /* display: flex;
-    align-items: flex-end;
-    justify-content: center; */
-}
+} */
 
 .titulo{
-    font-size: 15px;
+    margin-top: 10px;
+    font-size: 25px;
     font-weight: bold;
     color: black !important;
+    text-align: center;
+}
+.thead{
+    display: flex;
+    justify-content: center;
+}
+
+th{
+    text-align: center;
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+}
+
+.tablaCompleta{
+   margin: auto;
 }
 
 .imagenes{
@@ -31,12 +46,12 @@
 
 .celda{
     background-color: rgb(217, 217, 217);
-
-
-    /* display: flex;
-    justify-content: center; */
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .celda td{
     padding: 12px;
+    padding-left: 20px;
 }

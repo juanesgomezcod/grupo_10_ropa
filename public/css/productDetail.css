@@ -1,0 +1,9 @@
+.button-buy{
+    width: 110px;
+    border-radius: 5px;
+    border-width: 1px;
+    color: black;
+    padding: 4.0px;
+    margin-left: 5px;  
+    background: linear-gradient(to right, #d8dbdd, white);
+}
